@@ -6,6 +6,14 @@ Find ten adorable squirrels in sixty seconds while Miss Bunny’s cozy cottage s
 
 The visual baseline at [`8e6c31e`](https://github.com/jaychtw/squirrel-control/commit/8e6c31eb81d7a8438bdfc72b001fac24d866dafc) was explicitly approved for Gate A. This implementation preserves its character designs, cottage palette, responsive composition and solid light-purple page background (`#e4cdf4`). **Gate B gameplay/production acceptance is pending. Public deployment is not authorized.**
 
+## Hands-on playtest, Round 1
+
+[Download the playtest ZIP](playtest/squirrel-control-room1-4c1f788-playtest.zip), extract it, and follow `START-HERE.txt`. The verified route uses Python 3: run `python3 serve-playtest.py` in the extracted folder and open the computer address it prints. Windows can use `py serve-playtest.py`. Add `--lan` to test on a phone on the same Wi-Fi. No Node.js or package installation is needed to play, and nothing is publicly hosted.
+
+Play three fresh visual rounds, then return your device/browser, found/10 results and the most frustrating interaction. Direct HTML file opening remains unverified because this cloud browser blocks file URLs; use the helper for the verified route. [Session plan](docs/playtesting/ROUND-1.md) · [Bilingual feedback sheet](docs/playtesting/FEEDBACK.md) · [Human results, pending](docs/playtesting/RESULTS.md).
+
+The package contains the unchanged `4c1f788` game candidate. `npm run test:playtest` runs the separate portable-package checks; `npm test` remains the existing game suite. Human playtest and final production acceptance are pending.
+
 ## Review on GitHub
 
 ![Room 1 gameplay, desktop](docs/evidence/gameplay-1440-en-tidy.png)

@@ -1,0 +1,71 @@
+SQUIRREL CONTROL — HANDS-ON PLAYTEST, ROUND 1
+Game candidate: 1.0.0-rc.1 / source commit 4c1f788
+
+DESKTOP: LOCAL PLAY, NO PUBLIC SITE
+1. Extract the ZIP into a folder. Python 3 is needed for the local helper.
+2. In the extracted folder run:
+     python3 serve-playtest.py
+   On Windows you can also use:
+     py serve-playtest.py
+3. Open the computer address printed by the helper in your normal browser.
+   Keep the helper running; Ctrl+C stops it.
+4. Play three fresh rounds using only the game's on-screen guidance.
+5. Fill in FEEDBACK.md, or paste your observations back into the task chat.
+
+The HTML contains the game, art and fonts; play needs no Internet access,
+Node.js, accounts, package installation or developer console. The helper serves
+only the extracted folder on your computer by default.
+
+Directly opening Squirrel-Control-Playtest.html may also work in a desktop
+browser that permits local HTML. That launch path is NOT verified: this cloud
+browser's managed policy blocks file URLs. The verified route is the helper.
+Do not try to play from inside the ZIP, GitHub's source viewer, an email preview,
+or a phone's Files/Quick Look preview. Those viewers may not execute a game.
+
+PHONE: OPTIONAL LOCAL WI-FI TEST, NO PUBLIC HOSTING
+Use a computer with Python 3 and keep the phone on the same local Wi-Fi.
+In the extracted folder, run:
+  python3 serve-playtest.py --lan
+Windows can also use:
+  py serve-playtest.py --lan
+Open the LAN address printed by the helper in the phone's normal browser.
+If it cannot determine an address, use your computer's IPv4 address from its
+network settings and port 4175. Keep the helper running while playing.
+Stop it with Ctrl+C. It serves only this extracted folder, without a tunnel,
+public deployment, uploads, feedback collection or telemetry.
+If phone access is unavailable, mark that device check NOT TESTED.
+
+FIRST THREE ROUNDS (about 3–5 minutes)
+Use Play again for fresh hiding places. Do not read the text guide or this
+project's hiding-spot documentation before these initial visual attempts.
+Using the magnifier is fine; record whether you discovered/used it.
+After each round, record found/10, win or loss, and completion time if shown.
+Retrieve the room code from Comfort settings AFTER the round, so it can be
+reproduced. Do not count text-guide completions as visual-search wins.
+
+THEN CHECK THE INTERACTIONS (about 5 minutes)
+- Magnifier: move/drag to inspect; on touch lift, then tap a visible squirrel.
+  Note missed taps, lens/finger obstruction or accidental catches during drags.
+- Pause, wait, then resume. Switch tabs/apps once; return and resume deliberately.
+- Switch English/Traditional Chinese during a round. Check reading and count/time.
+- Let one round expire: are mess, Miss Bunny's reaction and retry clear and kind?
+- If you have not won, use the Room guide to try the success/replay path separately.
+- Try keyboard controls, larger text, reduced motion and sound if relevant to you.
+
+We are looking for real human difficulty, delight, clarity and input comfort.
+Automated checks already passed; they do not substitute for your observations.
+This is not a request to approve deployment. Human playtest results and final
+production acceptance are still pending.
+
+繁體中文快速開始
+解壓縮後，在該資料夾執行 python3 serve-playtest.py（需要 Python 3），
+再用一般瀏覽器開啟程式顯示的電腦網址。這是本機試玩，不會公開部署。
+先依畫面指示玩三回合，每次按「再玩一次」開始新局。先不要看文字線索；
+可以使用放大鏡，並記下是否有用到。每回合記錄找到幾隻／10、成功或失敗，
+以及成功時顯示的完成時間。回合結束後再到「舒適設定」抄下小屋代碼。
+接著試試放大鏡、暫停／切換分頁、語言切換，以及成功、失敗與重玩流程。
+請回報：裝置與瀏覽器、三回合成績、最難點到的松鼠、放大鏡是否舒服，
+還有你最想修改的一件事。用文字線索完成的回合請另外註記。
+手機請用同一個 Wi-Fi，依上方 Python 3 的本機分享方式，在一般瀏覽器測試；
+不要使用手機檔案預覽器。無法測試的裝置，請標示「未測試」。
+目前仍是部署前的試玩，尚未代表正式驗收或公開部署授權。

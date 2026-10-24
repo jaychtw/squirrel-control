@@ -1,0 +1,40 @@
+{
+  "candidate": "1.0.0-rc.1",
+  "gameSourceCommit": "4c1f7886148626b2c9ff3f59d5fa0bdddee4b3de",
+  "stats": {
+    "startTime": "2026-10-24T18:41:45.435Z",
+    "duration": 6563.841,
+    "expected": 5,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "tests": [
+    {
+      "title": "archive CRC, content hashes, standalone file and exact candidate JavaScript all match",
+      "status": "passed"
+    },
+    {
+      "title": "downloaded HTML supports real visible/covered hits, optical inspection and a full desktop win without external network",
+      "status": "passed"
+    },
+    {
+      "title": "downloaded HTML preserves pause, timeout, disappointed host, language and fresh retry",
+      "status": "passed"
+    },
+    {
+      "title": "downloaded HTML works in touch emulation, including drag/lift/tap and ten Chinese catches",
+      "status": "passed"
+    },
+    {
+      "title": "the optional Python local-server helper serves the same game, including a real catch",
+      "status": "passed"
+    }
+  ],
+  "identicalRegeneration": true,
+  "verifiedAccess": "Packaged HTML served by the included local Python helper",
+  "directFileLaunch": "NOT VERIFIED: managed Chromium blocked file: URLs with ERR_BLOCKED_BY_ADMINISTRATOR",
+  "humanSessions": 0,
+  "humanResults": "PENDING",
+  "publicDeployment": false
+}

@@ -10,6 +10,10 @@ The [archived Gate A report](VISUAL-REVIEW.md), [character sheet](evidence/chara
 
 The user authorized completing Room 1 according to GDD v1.0 and pinned UGDS v1.0.0, committing it and pushing it to `main` with evidence. See [Gate B verification](GATE-B-REVIEW.md) and the `gameplay-*.png` captures. Automated tests and code delivery do not constitute the user's final acceptance of difficulty, fun, interaction comfort, audio, animation or copy.
 
+## Hands-on playtest — requested and prepared, results pending
+
+The user requested a hands-on round before deployment. [Round 1](playtesting/ROUND-1.md) provides a downloadable distribution of the unchanged `4c1f788` game, local-only launch instructions, a bilingual feedback sheet and an empty results log. Automated package checks establish delivery behavior; they do not supply human observations or grant gameplay acceptance. No human session results have been recorded yet.
+
 ## Gate C — not authorized
 
 The user explicitly instructed **“Do not deploy publicly yet.”** No Pages deployment workflow, public release/tag, or live gameplay publication is part of this delivery. Pushing review source and evidence to the existing repository does not grant public deployment authorization. Production acceptance and deployment authorization remain separate checkpoints.

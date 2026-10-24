@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "version": "1.0.0-rc.1",
+  "gameSourceCommit": "4c1f7886148626b2c9ff3f59d5fa0bdddee4b3de",
+  "sourceCommitTimeUTC": "2026-10-24T17:23:12Z",
+  "approvedArtCommit": "8e6c31eb81d7a8438bdfc72b001fac24d866dafc",
+  "sourceBuildJavascript": {
+    "file": "index-BqoC0M3G.js",
+    "sha256": "55403aec683d0bc3e56d8eb356594039e4f242b10f6baff726e492c0b9121871"
+  },
+  "packagingRecipeSha256": "82edd18326b044b88b2396aa03b74bf182d8f4b509ba8599eda52b314087085d",
+  "files": {
+    "Squirrel-Control-Playtest.html": "ddb30e3b00f9e6a37b0eb18e1dd3b184f908bd14ad4842fe33c39e989dcdaeb1",
+    "START-HERE.txt": "6e2d6ab9513e505e7f778fff5d2abdcb143146e7c2f7e6b3c342116ba455d84e",
+    "FEEDBACK.md": "3e771b201d9be68999b5c1b6aa105fd7c0f56538b028353705f4afd90d0d7751",
+    "serve-playtest.py": "b3ffc6f6a1df17f62e8e3e5e2c72944cb95434f1d40181efee58beccbfaca801",
+    "licenses/DM-Sans-OFL.txt": "6fbd040a29c2037a765dfb9f2561e9965b5c95c6dcb5dce516089d63d5f17af7",
+    "licenses/Fraunces-OFL.txt": "cd3384cafac6f2bddc3955273958a2e029f97027c8037ac539ef5744a77b579e"
+  }
+}

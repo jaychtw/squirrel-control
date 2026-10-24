@@ -7,7 +7,9 @@
     "dev": "vite --host 0.0.0.0",
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview --host 0.0.0.0",
-    "test": "playwright test"
+    "test": "playwright test",
+    "package:playtest": "npm run build && node scripts/package-playtest.mjs",
+    "test:playtest": "npm run package:playtest && playwright test --config playwright.playtest.config.ts"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.10.2",

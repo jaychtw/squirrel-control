@@ -7,7 +7,7 @@ The Gate A study uses a deterministic set of four representative spots for stabl
 `makeLayout(mobile)` in `src/room.ts` defines the scene width, height and targets:
 
 ```ts
-{ id: 'sofa', x: 555, y: 243, scale: 0.9, variant: 1, clue: 'sofa' }
+{ id: 'sofa', x: 555, y: 233, scale: 0.94, variant: 1, clue: 'sofa' }
 ```
 
 `id` identifies the guest and its catch state. `x/y` are scene coordinates; `scale` applies uniformly to its actual SVG artwork. `variant` selects original fur/expression variants, and `clue` selects bilingual room-guide copy. IDs must be distinct. Furniture and host geometry are rendered after the targets. Edits to visible furniture must also appear in the composited scene; there are no independent invisible catch rectangles.

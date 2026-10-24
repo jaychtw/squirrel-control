@@ -1,10 +1,14 @@
-# Room 01 — Gate A visual review
+# Room 01 — Gate A visual review, revision 02
 
 **Status: implementation and automated QA complete for the visual study; human visual acceptance pending.** This is not a complete v1.0 game or a public release.
 
 ## Direction to review
 
-A warm storybook living room, with cream wallpaper, sunlit timber, a sage sofa, terracotta plants, honey-colored furniture, soft cocoa outlines and paper grain. Original butter-yellow Miss Bunny wears an orderly little apron; warm chestnut squirrels have tufted ears, curled tails and cheerful expressions. The furniture, host and target artwork are independent vectors composed in the game, not a flattened concept image. The UI continues the room's palette with quiet serif headings, small botanical details and restrained controls.
+Redesigned on 2026-10-25 in response to the supplied movie-still montage and solid lavender swatch. The page uses a solid light purple (`#e4cdf4`) with plum typography and controls; the dotted page texture has been removed. The room is a warm illustrated cottage with timber framing, leafy garden scenery, scalloped pink gingham curtains, a lilac sofa and draped throw, a mint sideboard, a flower-patterned rug, a wall clock, and a tea-and-cookie table. Darker cocoa contours and warmer flat colors give the scene an animation-cel feeling.
+
+Miss Bunny now has a larger, rounded continuous silhouette, asymmetrical ears, tiny expressive eyes, hatched rosy cheeks, a petal-shaped nose, and a sage linen pinafore. The squirrels have plump cream-and-caramel bodies, forehead patches, tufted ears, curled tails, tiny acorns and varied expressions. Normal and celebratory host poses plus all four target variants appear on the character sheet. The references inform broad qualities of shape, warmth and expression; none of their characters, accessories, exact faces or scene layouts were copied or traced. All artwork remains original and individually layered.
+
+The underlying four-target visual-study scope and the optical magnifier interaction remain intact. All hidden placements were revalidated against the new silhouettes.
 
 Four fixed representative hides let you evaluate recognition, occlusion and interaction without racing a clock. The phone composition rearranges the room, rather than cropping/shrinking the desktop illustration. The freely movable magnifier enlarges the same rendered furniture and targets, preserving occlusion. Tidy / Playful / Oh dear! are manual visual comparisons in this study; automatic time-driven progression belongs to the production build.
 
@@ -14,6 +18,7 @@ All captures are from the running production build. Viewport widths are CSS pixe
 
 | View | Evidence |
 | --- | --- |
+| Original character study | [Sheet](evidence/character-study.png) / [SVG](evidence/character-study.svg) |
 | Desktop, tidy, 1440 | [Screenshot](evidence/room-1440-en-tidy.png) |
 | Desktop, messy, 1440 | [Screenshot](evidence/room-1440-en-messy.png) |
 | Phone, tidy, 390 | [Screenshot](evidence/room-390-en-tidy.png) |
@@ -24,7 +29,7 @@ All captures are from the running production build. Viewport widths are CSS pixe
 | Desktop optical inspection | [Screenshot](evidence/magnifier-1440.png) |
 | Offset touch inspection | [Screenshot](evidence/magnifier-390.png) |
 
-Additional bilingual captures and raw pixel-count reports are in `docs/evidence`. The design document mentioned style-reference image attachments, but only the GDD was supplied in this task. No copyrighted reference images or third-party character artwork were used.
+Additional bilingual captures and raw pixel-count reports are in `docs/evidence`. The two supplied visual references were inspected in the conversation for this revision. They are not embedded in the application or redistributed as game assets. Previous visual iterations remain available in Git history. Regenerate the character sheet with `node scripts/render-character-study.mjs` on Node.js 24+; the normal browser suite regenerates the room/magnifier screenshots.
 
 ## Actual-silhouette validation
 
@@ -32,30 +37,30 @@ The test rasterizes each guest's real SVG silhouette and compares it with the fu
 
 | Hide | Desktop/tablet visible | Portrait visible |
 | --- | ---: | ---: |
-| Curtain | 63.50% | 62.76% |
-| Sofa | 35.65% | 43.56% |
-| Cabinet | 45.07% | 50.87% |
-| Basket | 53.13% | 47.83% |
+| Curtain | 72.21% | 71.04% |
+| Sofa | 42.63% | 48.50% |
+| Cabinet | 52.75% | 55.55% |
+| Basket | 59.46% | 54.15% |
 
 Every result exceeds the 30% floor in all three mess states, both languages, and the four tested widths. The validator counts actual opaque body/head/ear/tail/limb pixels, excluding translucent antialiasing edges from both measurements. It does not count sprite bounding boxes. Visible catches and covered-pixel rejection are separately exercised through browser input. Phone tap comfort is still a human check; a valid pixel fraction alone cannot establish it.
 
 ## QA report
 
-Validated 2026-10-24 (Asia/Taipei), Node.js 24.19.0, npm 11.9.0, Playwright 1.64.1, Chromium 154.0.8037.57 on Linux. Validation preceded the initial source commit; see the repository history for the visual-review commit. There is no release tag or deployment. Current production JS SHA-256: `3c297c7884041a75320946045faa7dbcfce76c4a01ef84de664303f26044330c`. Static output: approximately 356 KiB, including locally bundled font subsets and their OFL notices. No runtime external requests, keys, backend, tracking, or ads.
+Revision revalidated 2026-10-25 (Asia/Taipei), Node.js 24.19.0, npm 11.9.0, Playwright 1.64.1, Chromium 154.0.8037.57 on Linux. The previous review version is commit `813d6f0`; this redesign is provided in its successor on `main`. There is no release tag or deployment. Current production JS SHA-256: `200eb9993013dee0cbd40740928a6c9bc97e916a72c375c4cd4db80e5be6118d`. Static output: approximately 364 KiB, including locally bundled font subsets and their OFL notices. No runtime external requests, keys, backend, tracking, or ads.
 
 Commands actually run:
 
-- `npm ci --cache /workspace/.npm --no-audit --no-fund` — passed; frozen lockfile installation.
-- `npm run build` — passed; TypeScript and Vite static compilation. Also rerun by the final test invocation and after adding the distributed font license notices.
-- `npm test` — **17 passed, 0 failed, 0 skipped**, final complete run, 25.1 seconds with two workers.
+- `npm ci --cache /workspace/.npm --no-audit --no-fund` — passed during initial setup; the unchanged lockfile and installed dependencies were reused for this revision.
+- `npm run build` — passed; TypeScript and Vite static compilation, rerun by the final browser suite.
+- `npm test` — **17 passed, 0 failed, 0 skipped**, final complete run, 26.3 seconds with two workers.
 
 Coverage: layered composition; all masks at 320/390/768/1440 in English and Traditional Chinese across all three mess states; no horizontal overflow; complete four-target capture at every width/language; duplicate catch rejection; covered furniture rejection; cancel/reset/replay; desktop optical lens and keyboard catch; actual CDP touch drag/tap emulation with offset lens and complete four-target capture; live language/state retention; guide actions; modal focus restoration and toggle focus; persisted, corrupt and blocked preference storage; reduced motion; background visibility pause/resume; no external requests; no observed JavaScript, console or missing-asset errors in the primary page fixtures. The separate touch context is validated through successful actual interaction and lens/composition assertions.
 
 The axe WCAG 2 A/AA and 2.1 AA rule scans passed with **zero violations** for the active phone room plus instructions, text guide and comfort dialogs in both languages. This is automated supporting evidence, not a claim of complete WCAG conformance. The text guide offers a nonvisual alternative, with explicit disclosure that it makes the hunt easier.
 
-After the test run, the development server was restarted from the saved command and independently checked: HTTP 200, scene ready, begin action working, and no observed page errors. Font license files were verified in the final static output.
+The current revision was tested against a fresh production build served by the test runner. The initial environment setup separately verified development-server startup; no server-start changes or dependency changes were needed for this visual revision. Font license files remain in the static output.
 
-The earliest validation found insufficient cabinet exposure and low-contrast secondary copy. These were corrected and the affected checks, followed by the complete suite, passed. A test helper initially assumed SVGRect supported `toJSON`; the helper now reads its real width/height. Full-page screenshot capture can move the emulated pointer when the viewport is restored, so the keyboard-catch test explicitly repositions inspection after capturing evidence.
+The first redesign run passed visibility and interaction checks but found insufficient contrast for secondary text on lavender. The text and link colors were darkened; the affected audit and then the complete suite passed. The minimum current exposure is 42.63%, exceeding the 30% floor. The original alpha-mask hit testing and touch drag/tap distinction remain authoritative.
 
 ## Acceptance checklist against pinned UGDS
 

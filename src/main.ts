@@ -79,7 +79,7 @@ function render() {
   document.documentElement.dataset.motion = String(motion);
   document.title = `${t('title')} — ${t('room')}`;
   app.innerHTML = `${header()}<main>
-    <section class="introduction" aria-labelledby="main-title"><div><p class="eyebrow">${t('eyebrow')}</p><h1 id="main-title">${t('headline')} <em>${t('headlineEm')}</em><span class="title-spark" aria-hidden="true">✳</span></h1></div><p class="intro-copy">${t('intro').replace('\n', '<br>')}</p></section>
+    <section class="introduction" aria-labelledby="main-title"><div><p class="eyebrow">${t('eyebrow')}</p><h1 id="main-title">${t('headline')} <em>${t('headlineEm')}</em><span class="title-spark" aria-hidden="true">✻</span></h1></div><p class="intro-copy">${t('intro').replace('\n', '<br>')}</p></section>
     <section class="game-card" aria-label="${t('room')}"><div class="room-header"><div class="room-title"><span class="room-number">${t('roomNumber')}</span><h2>${t('room')}</h2><span class="room-subtitle">${t('subtitle')}</span></div>
       <div class="hud"><div class="timer" aria-label="${t('timer')}, ${t('timerNote')}"><span class="timer-clock" aria-hidden="true"></span><div><strong>01:00</strong><small>${t('timerNote')}</small></div></div><div class="hud-divider"></div><div class="counter" aria-label="${caught.size} ${t('of')} 4 ${t('srCount')}"><span class="counter-top"><strong>${caught.size}<span> / 4</span></strong><small>${t('found')}</small></span><span class="find-dots" aria-hidden="true">${dots()}</span></div>
       <button class="icon-button reset-button" data-action="reset" aria-label="${t('replayLabel')}">${icon('reset')}</button></div></div>

@@ -4,9 +4,11 @@ An original, cozy illustrated hidden-character game for desktop and mobile web. 
 
 ## Review the prototype
 
+**Visual revision 02 — 2026-10-25:** redesigned rounded characters and a warmer illustrated cottage, with a solid light-purple page background (`#e4cdf4`) and plum controls. The supplied movie-still montage informed broad visual qualities; all game artwork is original.
+
 ![Room 01 desktop visual study](docs/evidence/room-1440-en-tidy.png)
 
-[Phone view](docs/evidence/room-390-en-tidy.png) · [Messy room](docs/evidence/room-1440-en-messy.png) · [Touch magnifier](docs/evidence/magnifier-390.png) · [Traditional Chinese](docs/evidence/room-390-zh-TW-messy.png) · [Visual review and QA](docs/VISUAL-REVIEW.md)
+[Character study](docs/evidence/character-study.png) · [Phone view](docs/evidence/room-390-en-tidy.png) · [Messy room](docs/evidence/room-1440-en-messy.png) · [Touch magnifier](docs/evidence/magnifier-390.png) · [Traditional Chinese](docs/evidence/room-390-zh-TW-messy.png) · [Visual review and QA](docs/VISUAL-REVIEW.md)
 
 The images and report can be reviewed directly on GitHub. Run the project locally to try the interactions.
 
@@ -53,8 +55,10 @@ Preference storage is optional and validated. Blocked/corrupt storage cannot pre
 - `src/hit-map.ts`: rendered silhouette validation and authoritative pixel hit testing.
 - `src/main.ts`: input gestures, optical lens, transient room state, dialogs, feedback and preferences.
 - `src/i18n.ts`: all interface and accessibility copy in both languages.
-- `src/style.css`: responsive paper-and-sage interface and motion preferences.
+- `src/style.css`: responsive lavender-and-cream interface and motion preferences.
 - `tests/room.spec.ts`: production-browser interactions, touch emulation, visual evidence, visibility and accessibility checks.
 - [Visual review and QA](docs/VISUAL-REVIEW.md), [hiding-spot authoring](docs/HIDING-SPOTS.md).
+
+To regenerate the standalone character sheet on Node.js 24+, run `node scripts/render-character-study.mjs`. The normal browser tests refresh the room and magnifier screenshots.
 
 Engineering baseline: [UGDS v1.0.0](docs/UGDS-v1.0.0.md), pinned to `jaychtw/game-development-standards@d5c6696efdd6efc028118600466db44aecae0c9b`. Match3 Core is not used. The other match-game references are process references; no code or artwork was copied.

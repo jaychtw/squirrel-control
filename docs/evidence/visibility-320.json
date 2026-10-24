@@ -5,58 +5,58 @@
     "masks": [
       {
         "id": "curtain",
-        "silhouettePixels": 3518,
-        "visiblePixels": 2208,
-        "ratio": 0.6276293348493462,
+        "silhouettePixels": 4613,
+        "visiblePixels": 3277,
+        "ratio": 0.7103836982440928,
         "visiblePoint": {
-          "x": 100,
-          "y": 239
+          "x": 83,
+          "y": 238
         },
         "hiddenPoint": {
-          "x": 87,
-          "y": 269
+          "x": 81,
+          "y": 266
         }
       },
       {
         "id": "sofa",
-        "silhouettePixels": 3680,
-        "visiblePixels": 1603,
-        "ratio": 0.4355978260869565,
+        "silhouettePixels": 5060,
+        "visiblePixels": 2454,
+        "ratio": 0.4849802371541502,
         "visiblePoint": {
-          "x": 369,
-          "y": 323
+          "x": 341,
+          "y": 319
         },
         "hiddenPoint": {
-          "x": 336,
-          "y": 356
+          "x": 376,
+          "y": 352
         }
       },
       {
         "id": "cabinet",
-        "silhouettePixels": 3845,
-        "visiblePixels": 1956,
-        "ratio": 0.5087126137841352,
+        "silhouettePixels": 5060,
+        "visiblePixels": 2811,
+        "ratio": 0.5555335968379447,
         "visiblePoint": {
-          "x": 546,
-          "y": 420
+          "x": 538,
+          "y": 417
         },
         "hiddenPoint": {
-          "x": 575,
-          "y": 453
+          "x": 532,
+          "y": 451
         }
       },
       {
         "id": "basket",
-        "silhouettePixels": 4564,
-        "visiblePixels": 2183,
-        "ratio": 0.47830850131463626,
+        "silhouettePixels": 6066,
+        "visiblePixels": 3285,
+        "ratio": 0.5415430267062314,
         "visiblePoint": {
-          "x": 69,
-          "y": 622
+          "x": 77,
+          "y": 619
         },
         "hiddenPoint": {
-          "x": 90,
-          "y": 658
+          "x": 74,
+          "y": 656
         }
       }
     ]
@@ -67,58 +67,58 @@
     "masks": [
       {
         "id": "curtain",
-        "silhouettePixels": 3518,
-        "visiblePixels": 2208,
-        "ratio": 0.6276293348493462,
+        "silhouettePixels": 4613,
+        "visiblePixels": 3277,
+        "ratio": 0.7103836982440928,
         "visiblePoint": {
-          "x": 100,
-          "y": 239
+          "x": 83,
+          "y": 238
         },
         "hiddenPoint": {
-          "x": 87,
-          "y": 269
+          "x": 81,
+          "y": 266
         }
       },
       {
         "id": "sofa",
-        "silhouettePixels": 3680,
-        "visiblePixels": 1603,
-        "ratio": 0.4355978260869565,
+        "silhouettePixels": 5060,
+        "visiblePixels": 2454,
+        "ratio": 0.4849802371541502,
         "visiblePoint": {
-          "x": 369,
-          "y": 323
+          "x": 341,
+          "y": 319
         },
         "hiddenPoint": {
-          "x": 336,
-          "y": 356
+          "x": 376,
+          "y": 352
         }
       },
       {
         "id": "cabinet",
-        "silhouettePixels": 3845,
-        "visiblePixels": 1956,
-        "ratio": 0.5087126137841352,
+        "silhouettePixels": 5060,
+        "visiblePixels": 2811,
+        "ratio": 0.5555335968379447,
         "visiblePoint": {
-          "x": 546,
-          "y": 420
+          "x": 538,
+          "y": 417
         },
         "hiddenPoint": {
-          "x": 575,
-          "y": 453
+          "x": 532,
+          "y": 451
         }
       },
       {
         "id": "basket",
-        "silhouettePixels": 4564,
-        "visiblePixels": 2183,
-        "ratio": 0.47830850131463626,
+        "silhouettePixels": 6066,
+        "visiblePixels": 3285,
+        "ratio": 0.5415430267062314,
         "visiblePoint": {
-          "x": 69,
-          "y": 622
+          "x": 77,
+          "y": 619
         },
         "hiddenPoint": {
-          "x": 90,
-          "y": 658
+          "x": 74,
+          "y": 656
         }
       }
     ]
@@ -129,58 +129,58 @@
     "masks": [
       {
         "id": "curtain",
-        "silhouettePixels": 3518,
-        "visiblePixels": 2208,
-        "ratio": 0.6276293348493462,
+        "silhouettePixels": 4613,
+        "visiblePixels": 3277,
+        "ratio": 0.7103836982440928,
         "visiblePoint": {
-          "x": 100,
-          "y": 239
+          "x": 83,
+          "y": 238
         },
         "hiddenPoint": {
-          "x": 87,
-          "y": 269
+          "x": 81,
+          "y": 266
         }
       },
       {
         "id": "sofa",
-        "silhouettePixels": 3680,
-        "visiblePixels": 1603,
-        "ratio": 0.4355978260869565,
+        "silhouettePixels": 5060,
+        "visiblePixels": 2454,
+        "ratio": 0.4849802371541502,
         "visiblePoint": {
-          "x": 369,
-          "y": 323
+          "x": 341,
+          "y": 319
         },
         "hiddenPoint": {
-          "x": 336,
-          "y": 356
+          "x": 376,
+          "y": 352
         }
       },
       {
         "id": "cabinet",
-        "silhouettePixels": 3845,
-        "visiblePixels": 1956,
-        "ratio": 0.5087126137841352,
+        "silhouettePixels": 5060,
+        "visiblePixels": 2811,
+        "ratio": 0.5555335968379447,
         "visiblePoint": {
-          "x": 546,
-          "y": 420
+          "x": 538,
+          "y": 417
         },
         "hiddenPoint": {
-          "x": 575,
-          "y": 453
+          "x": 532,
+          "y": 451
         }
       },
       {
         "id": "basket",
-        "silhouettePixels": 4564,
-        "visiblePixels": 2183,
-        "ratio": 0.47830850131463626,
+        "silhouettePixels": 6066,
+        "visiblePixels": 3285,
+        "ratio": 0.5415430267062314,
         "visiblePoint": {
-          "x": 69,
-          "y": 622
+          "x": 77,
+          "y": 619
         },
         "hiddenPoint": {
-          "x": 90,
-          "y": 658
+          "x": 74,
+          "y": 656
         }
       }
     ]

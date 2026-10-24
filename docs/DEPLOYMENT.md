@@ -4,7 +4,15 @@ Owner authorization: **2026-10-25 (Asia/Taipei)**, “Play testing is passed. Pr
 
 ## Status
 
-Publication is being prepared. Local validation passed: **51/51 gameplay tests**, zero skips/flakes/failures, including an unmocked loss at **60,225ms**. The publication smoke script also passed all four checks against the local production build. [Machine-readable local evidence](evidence/publication-local-verification.json). No successful hosted run, deployment or public-site check is claimed yet.
+**Published and verified on 2026-10-25 (Asia/Taipei).** [Play Room 1](https://jaychtw.github.io/squirrel-control/).
+
+Release commit: **`b7ca1dffd55eff650979d5ed828f78b37f4dfd31`**. [Hosted workflow #1](https://github.com/jaychtw/squirrel-control/actions/runs/40126699586) concluded **Success**. Its full test step, approved-bundle guard, static upload, Pages configuration, deployment and public gameplay verification all succeeded. [Machine-readable hosted evidence](evidence/publication-hosted-verification.json).
+
+The live verification checked the exact release manifest and bundle hash, then completed ten-catch wins at 1440px/mouse/English and 390px/emulated touch/Traditional Chinese. It also checked furniture occlusion, the optical magnifier, pause and real countdown, live language switching, host reaction, assets and responsive overflow. No browser errors or external runtime requests were observed by those checks.
+
+[Download public verification and desktop/mobile screenshots](https://github.com/jaychtw/squirrel-control/actions/runs/40126699586/artifacts/12573358018) — `public-gameplay-evidence`, retained for 90 days (GitHub sign-in may be required). Includes `desktop-en.png`, `desktop-win.png`, `mobile-zh-TW.png`, `mobile-win.png`, `verification.json` and `SUMMARY.md`. [Hosted test results](https://github.com/jaychtw/squirrel-control/actions/runs/40126699586/artifacts/12573392931) are retained for 30 days.
+
+Local validation also passed **51/51 gameplay tests**, zero skips/flakes/failures, including an unmocked loss at **60,225ms**, plus all four publication smoke checks against the local production build. [Local evidence](evidence/publication-local-verification.json). Direct access to GitHub's API/Pages domain from this cloud workspace is blocked by its network proxy; the live browser checks ran in GitHub Actions, whose successful job/step status was verified from GitHub's public run pages. No local direct-public browser check is claimed.
 
 Target: **https://jaychtw.github.io/squirrel-control/**, GitHub Pages. Approved game source: `4c1f7886148626b2c9ff3f59d5fa0bdddee4b3de`; approved JavaScript SHA-256: `55403aec683d0bc3e56d8eb356594039e4f242b10f6baff726e492c0b9121871`. No game code, artwork, rules or runtime dependencies change in this publication milestone.
 

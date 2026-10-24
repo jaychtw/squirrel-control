@@ -6,7 +6,13 @@ Find ten adorable squirrels in sixty seconds while Miss Bunny’s cozy cottage s
 
 The visual baseline at [`8e6c31e`](https://github.com/jaychtw/squirrel-control/commit/8e6c31eb81d7a8438bdfc72b001fac24d866dafc) was explicitly approved for Gate A. This implementation preserves its character designs, cottage palette, responsive composition and solid light-purple page background (`#e4cdf4`). **Hands-on playtesting passed and the owner authorized public deployment on 2026-10-25 (Asia/Taipei).** See the [publication status](docs/DEPLOYMENT.md) for the distinction between authorization, CI, deployment and live verification.
 
-## Hands-on playtest, Round 1
+## Play online
+
+**[Play Squirrel Control — Room 1](https://jaychtw.github.io/squirrel-control/)**
+
+Release [`b7ca1df`](https://github.com/jaychtw/squirrel-control/commit/b7ca1dffd55eff650979d5ed828f78b37f4dfd31) passed [hosted tests, GitHub Pages publication and live desktop/touch gameplay checks](https://github.com/jaychtw/squirrel-control/actions/runs/40126699586). [Deployment evidence and screenshots](docs/DEPLOYMENT.md).
+
+## Hands-on playtest, Round 1 — passed
 
 [Download the playtest ZIP](playtest/squirrel-control-room1-4c1f788-playtest.zip), extract it, and follow `START-HERE.txt`. The verified route uses Python 3: run `python3 serve-playtest.py` in the extracted folder and open the computer address it prints. Windows can use `py serve-playtest.py`. Add `--lan` to test on a phone on the same Wi-Fi. No Node.js or package installation is needed to play, the helper serves only your computer or local network.
 

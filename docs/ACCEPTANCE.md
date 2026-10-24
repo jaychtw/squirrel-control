@@ -10,8 +10,8 @@ Room 1 was delivered at game-source commit **`4c1f7886148626b2c9ff3f59d5fa0bddde
 
 The user did not supply session scores, devices, browsers or detailed observations. Those details remain unreported; no independent-player, physical-device or manual accessibility results are inferred. [Playtesting record](playtesting/RESULTS.md).
 
-## Gate C — authorized; publication in progress
+## Gate C — authorized, published and verified
 
 The latest explicit authorization supersedes the earlier **“Do not deploy publicly yet”** checkpoint. Publication uses GitHub Pages, as specified by the GDD. The deployment preserves the accepted game bundle and adds build/test/deployment automation and public gameplay verification.
 
-Build success, source push, hosted CI, deployment and live interaction verification are tracked separately in [the publication report](DEPLOYMENT.md). Authorization alone does not mean publication has succeeded.
+Release **`b7ca1df`** was published successfully to **https://jaychtw.github.io/squirrel-control/**. Hosted workflow #1 passed the full test step, artifact guard, deployment and public desktop/touch gameplay checks. Build, source push, hosted CI, deployment and live verification are recorded separately in [the publication report](DEPLOYMENT.md). The subsequent documentation-only evidence commit does not replace that deployed release.

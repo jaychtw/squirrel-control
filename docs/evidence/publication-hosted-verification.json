@@ -1,0 +1,192 @@
+{
+  "observedAt": "2026-10-25T03:50:24.580161+08:00",
+  "liveUrl": "https://jaychtw.github.io/squirrel-control/",
+  "releaseCommit": "b7ca1dffd55eff650979d5ed828f78b37f4dfd31",
+  "approvedGameSourceCommit": "4c1f7886148626b2c9ff3f59d5fa0bdddee4b3de",
+  "approvedJavaScriptSha256": "55403aec683d0bc3e56d8eb356594039e4f242b10f6baff726e492c0b9121871",
+  "workflowRun": "https://github.com/jaychtw/squirrel-control/actions/runs/40126699586",
+  "workflowConclusion": "success",
+  "evidenceMethod": "Observed public GitHub Actions run and job pages. The runner executed the checked-in full suite, release guard, deployment action and public browser smoke script; each relevant step succeeded.",
+  "localDirectPublicAccess": "Blocked by workspace network proxy; public interaction verification ran in GitHub Actions instead.",
+  "verifyJob": {
+    "url": "https://github.com/jaychtw/squirrel-control/actions/runs/40126699586/job/120969579893",
+    "steps": [
+      {
+        "name": "Set up job",
+        "conclusion": "success",
+        "started-at": "2026-10-24T19:45:05Z",
+        "completed-at": "2026-10-24T19:45:06Z"
+      },
+      {
+        "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+        "conclusion": "success",
+        "started-at": "2026-10-24T19:45:06Z",
+        "completed-at": "2026-10-24T19:45:08Z"
+      },
+      {
+        "name": "Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020",
+        "conclusion": "success",
+        "started-at": "2026-10-24T19:45:08Z",
+        "completed-at": "2026-10-24T19:45:13Z"
+      },
+      {
+        "name": "Run npm ci --no-audit --no-fund",
+        "conclusion": "success",
+        "started-at": "2026-10-24T19:45:13Z",
+        "completed-at": "2026-10-24T19:45:14Z"
+      },
+      {
+        "name": "Install Chromium",
+        "conclusion": "success",
+        "started-at": "2026-10-24T19:45:14Z",
+        "completed-at": "2026-10-24T19:45:45Z"
+      },
+      {
+        "name": "Full gameplay, visibility and accessibility suite",
+        "conclusion": "success",
+        "started-at": "2026-10-24T19:45:45Z",
+        "completed-at": "2026-10-24T19:47:35Z"
+      },
+      {
+        "name": "Identify the approved static artifact",
+        "conclusion": "success",
+        "started-at": "2026-10-24T19:47:35Z",
+        "completed-at": "2026-10-24T19:47:35Z"
+      },
+      {
+        "name": "Save test results",
+        "conclusion": "success",
+        "started-at": "2026-10-24T19:47:35Z",
+        "completed-at": "2026-10-24T19:47:36Z"
+      },
+      {
+        "name": "Package only the static site",
+        "conclusion": "success",
+        "started-at": "2026-10-24T19:47:36Z",
+        "completed-at": "2026-10-24T19:47:37Z"
+      },
+      {
+        "name": "Post Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020",
+        "conclusion": "success",
+        "started-at": "2026-10-24T19:47:37Z",
+        "completed-at": "2026-10-24T19:47:38Z"
+      },
+      {
+        "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+        "conclusion": "success",
+        "started-at": "2026-10-24T19:47:38Z",
+        "completed-at": "2026-10-24T19:47:38Z"
+      },
+      {
+        "name": "Complete job",
+        "conclusion": "success",
+        "started-at": "2026-10-24T19:47:38Z",
+        "completed-at": "2026-10-24T19:47:38Z"
+      }
+    ]
+  },
+  "deployJob": {
+    "url": "https://github.com/jaychtw/squirrel-control/actions/runs/40126699586/job/120970177672",
+    "steps": [
+      {
+        "name": "Set up job",
+        "conclusion": "success",
+        "started-at": "2026-10-24T19:47:46Z",
+        "completed-at": "2026-10-24T19:47:47Z"
+      },
+      {
+        "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+        "conclusion": "success",
+        "started-at": "2026-10-24T19:47:47Z",
+        "completed-at": "2026-10-24T19:47:49Z"
+      },
+      {
+        "name": "Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020",
+        "conclusion": "success",
+        "started-at": "2026-10-24T19:47:49Z",
+        "completed-at": "2026-10-24T19:47:56Z"
+      },
+      {
+        "name": "Read GitHub Pages configuration",
+        "conclusion": "success",
+        "started-at": "2026-10-24T19:47:56Z",
+        "completed-at": "2026-10-24T19:47:56Z"
+      },
+      {
+        "name": "Deploy tested artifact",
+        "conclusion": "success",
+        "started-at": "2026-10-24T19:47:56Z",
+        "completed-at": "2026-10-24T19:48:03Z"
+      },
+      {
+        "name": "Run npm ci --no-audit --no-fund",
+        "conclusion": "success",
+        "started-at": "2026-10-24T19:48:03Z",
+        "completed-at": "2026-10-24T19:48:04Z"
+      },
+      {
+        "name": "Run npx playwright install --with-deps chromium",
+        "conclusion": "success",
+        "started-at": "2026-10-24T19:48:04Z",
+        "completed-at": "2026-10-24T19:48:25Z"
+      },
+      {
+        "name": "Verify exact release and real public mouse/touch gameplay",
+        "conclusion": "success",
+        "started-at": "2026-10-24T19:48:25Z",
+        "completed-at": "2026-10-24T19:48:44Z"
+      },
+      {
+        "name": "Save public verification and desktop/mobile screenshots",
+        "conclusion": "success",
+        "started-at": "2026-10-24T19:48:44Z",
+        "completed-at": "2026-10-24T19:48:46Z"
+      },
+      {
+        "name": "Post Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020",
+        "conclusion": "success",
+        "started-at": "2026-10-24T19:48:46Z",
+        "completed-at": "2026-10-24T19:48:46Z"
+      },
+      {
+        "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+        "conclusion": "success",
+        "started-at": "2026-10-24T19:48:46Z",
+        "completed-at": "2026-10-24T19:48:46Z"
+      },
+      {
+        "name": "Complete job",
+        "conclusion": "success",
+        "started-at": "2026-10-24T19:48:46Z",
+        "completed-at": "2026-10-24T19:48:47Z"
+      }
+    ]
+  },
+  "publicChecks": [
+    "Exact live release.json commit",
+    "Live JavaScript SHA-256 matches accepted candidate",
+    "1440px English mouse: full ten-catch win, covered-pixel rejection, optical magnifier, pause, actual countdown, live language switching, loaded assets, no overflow/errors/external requests",
+    "390px Traditional Chinese emulated touch: inspection drag without capture and full ten-catch win, covered-pixel rejection, optical magnifier, pause, actual countdown, loaded assets, no overflow/errors/external requests"
+  ],
+  "publicEvidenceArtifact": {
+    "url": "https://github.com/jaychtw/squirrel-control/actions/runs/40126699586/artifacts/12573358018",
+    "name": "public-gameplay-evidence",
+    "sha256ReportedByGitHub": "02761d6e1af6e3a4c2067aef261c04dc8ab4255ff209e23200fe6702b4677c9d",
+    "contents": [
+      "desktop-en.png",
+      "desktop-win.png",
+      "mobile-zh-TW.png",
+      "mobile-win.png",
+      "verification.json",
+      "SUMMARY.md"
+    ],
+    "retentionDays": 90
+  },
+  "testResultsArtifact": {
+    "url": "https://github.com/jaychtw/squirrel-control/actions/runs/40126699586/artifacts/12573392931",
+    "name": "release-tests",
+    "sha256ReportedByGitHub": "8b0eb6a959221db27f6612d5c9c60b1feb7a734b28071ff8b93480c79746cd35",
+    "retentionDays": 30
+  },
+  "limits": "No additional physical-device or independent human sessions are claimed. Artifact digests above are reported by GitHub, not hashes of a locally downloaded archive."
+}

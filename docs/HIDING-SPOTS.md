@@ -1,31 +1,54 @@
-# Hiding-spot authoring and validation
+# Curated hiding spots, seeds and visibility proof
 
-The Gate A study uses a deterministic set of four representative spots for stable visual review. Seeded random selection of ten targets is intentionally reserved for the post-approval production implementation. No seed parameter or randomness is claimed in this build.
+Room 1 selects exactly **ten distinct spots from a thirteen-spot pool**. There are 286 possible ten-spot subsets. The pool has separate authored positions in the approved desktop (**1120×650**) and portrait (**640×820**) compositions. There is no crop; portrait is selected at 620 CSS px and below. Target IDs and variants survive viewport changes and language switching.
 
-## Format
+## Format and reproduction
 
-`makeLayout(mobile)` in `src/room.ts` defines the scene width, height and targets:
+`HIDING_SPOTS` in `src/placements.ts` contains records like:
 
 ```ts
-{ id: 'sofa', x: 555, y: 233, scale: 0.94, variant: 1, clue: 'sofa' }
+{id:'sofa-left', desktop:[410,233,.94], portrait:[209,285,.88], clue:'sofaLeft'}
 ```
 
-`id` identifies the guest and its catch state. `x/y` are scene coordinates; `scale` applies uniformly to its actual SVG artwork. `variant` selects original fur/expression variants, and `clue` selects bilingual room-guide copy. IDs must be distinct. Furniture and host geometry are rendered after the targets. Edits to visible furniture must also appear in the composited scene; there are no independent invisible catch rectangles.
+Each pose is `[x, y, uniformScale]` in scene coordinates. IDs must be distinct. `clue` identifies localized text in both language dictionaries. `makeLayout(mobile, seed)` returns the ten selected placements; its `all` flag is reserved for offline authoring/QA and is not exposed as a player mode. Fur/expression variants share the same external silhouette.
 
-There are separate authored positions at viewBoxes **1120×650** and **640×820**. The portrait layout is selected at 620 CSS px and below. The whole viewBox remains visible (no crop). At the breakpoint the scene re-renders, keeping caught IDs, language, and room mood.
+A 32-bit FNV-derived seed feeds a deterministic Mulberry-style generator. Fisher–Yates selection chooses ten IDs without replacement. A second stream chooses variants in stable catalog order, so viewport changes never reroll guests. Fresh room codes use `crypto.getRandomValues`. Replays avoid immediately repeating the same ten-ID subset when choosing their new code. No online service is involved.
 
-## Authoritative pixels
+Append `?seed=review-room-01` to reproduce the review round. Valid codes have 1–48 ASCII letters, digits, hyphens or underscores. Other inputs are ignored. Comfort settings show/copy the current code; replay intentionally makes a fresh round even if the original URL included a code.
 
-`HitMap.create` clones the actual SVG, removes the background/texture, and recolors each squirrel to a unique solid ink. Foreground furniture, host, and mess become black, preserving the real drawing order and geometry. The result is rasterized at scene resolution with the browser SVG renderer. A click is inverse-mapped from CSS coordinates into these pixels and succeeds only on a surviving target ink pixel. Anti-aliased edges use a narrow color tolerance and require alpha ≥200/255. Covered furniture, decorative gaps, and transparent target bounding boxes never produce target ink.
+## Layer and occlusion contract
 
-The validator separately renders each squirrel **without occluders** and counts its opaque silhouette pixels, then counts those still visible after all foreground layers. The visible ratio is `visiblePixels / silhouettePixels`; it is not a bounding-box fraction. This includes actual ears, tail, head, body and limb silhouettes. Subpixel translucent edges are excluded from both counts. No touch hitbox dilation is applied.
+- **L0:** walls, garden, static non-occluding decor, floor and rug.
+- **L1:** selected target sprites, removed from the drawing when caught.
+- **L2:** actual foreground furniture/curtain surfaces and authored occluders. The approved wall pictures and left flowerpot are useful foreground hides; the letter rack and sewing box extend the same approved visual vocabulary.
+- **Safe mess sublayer:** floor/wall disorder outside every squirrel silhouette, before the host.
+- **L3:** stationary Miss Bunny during play; approved celebration and a gentle new disappointed reaction at the outcome.
+- **UI:** outside the main interaction region, apart from a protected low-floor instruction pill, noninteractive feedback, and offset optical lens.
 
-The same native-resolution hit map is sampled on all CSS sizes. Browser tests also perform real CSS-to-viewBox clicks at desktop and touch-emulated portrait sizes. Physical-device accuracy and Safari/Firefox raster edge behavior still need human verification.
+The room deteriorates at 15, 30 and 45 active seconds, then reveals its final mess on loss at 60 seconds. No hide geometry moves with captures or deterioration. The clock is the decorative picture allowed to tilt; the two target-bearing pictures remain fixed so their occlusion never changes.
 
-## Validation procedure
+## Authoritative pixel masks
 
-Run `npm test`. For every supported viewport (320, 390, 768, 1440), both languages, and each of the three mess states, the tests require all four visible ratios ≥0.30. They also check the L0 → L1 → L2 → safe mess → L3 order, unchanged reachability, no horizontal crop, visible catches, and rejection of covered target pixels. A 30% floor is a validity check, not a claim that phone tap comfort is sufficient.
+`HitMap.create` clones the exact SVG, removes background/texture, gives each target a unique opaque ink, and paints furniture, host and safe mess black. Browser SVG rasterization preserves all real geometry and layer order. A pointer coordinate is mapped into the scene's pixel mask and catches only a surviving target ink pixel. Anti-aliased edges use a narrow color tolerance and alpha ≥200/255. There are no rectangular catch boxes or touch hitbox dilation through furniture.
 
-`#scene` exposes a nonvisual `data-visibility` diagnostic: per-guest full/visible pixel counts, ratio, and representative visible/covered points. This is for reproducible QA only; it does not reveal or highlight targets in the interface. The live magnifier is a second copy of the **entire unchanged composited SVG**, so normal occlusion is preserved. All mess props occupy safe wall/floor locations, and the UI sits outside the playable scene except the low floor instruction pill and the offset noninteractive lens.
+Each complete squirrel is separately rasterized into a generously padded **local tile**. The validator counts its actual opaque silhouette pixels (ears/head/body/limbs/tail), and counts how many survive the foreground composite. The ratio is `visiblePixels / silhouettePixels`, not a rectangle fraction. Translucent antialiasing edges are excluded consistently. Tiles are only a memory/work optimization: their rectangles are neither hitboxes nor denominators, and edge/crop checks ensure no part of a body was lost outside the tile or room.
 
-When authoring another spot, inspect its recognizable exposed features at 320 px, inspect all mess states and host overlap, test visible/covered hit pixels, and rerun validation before adding it to a future production selection pool. Do not fix an invalid spot by reducing the minimum, making furniture transparent, or expanding catch regions through furniture.
+The validator also records actual silhouette-pixel overlap between guests. All thirteen can coexist without overlap. Validating the complete pool therefore proves that removing any three targets cannot reduce the reachability of the other ten. The 10,000-seed structural test exercises all 286 subsets and verifies membership, uniqueness and cross-layout stability.
+
+The two current-layout hit maps are prepared before the clock starts and cached. Each sampled selected round must satisfy the count, ≥30% visibility, crop and overlap checks before play is enabled. Catching only marks an ID; the engine rejects caught IDs even though the cached map retains its former pixels. Because automated tests prove exact target-pixel equality at every mess stage, a stage change does not require another expensive mask build during timed play. A breakpoint change selects the already-prepared other-layout map, without losing active time or waiting on a raster operation.
+
+## What the tests prove
+
+`npm test` validates the complete thirteen-spot pool at both native viewBoxes and at the actual CSS scene resolutions for 320, 390, 768 and 1440 CSS px, across all five deterioration states. It requires:
+
+1. Every actual body silhouette has at least 30% exposed ink.
+2. No target is cropped and no two body silhouettes overlap.
+3. The set of visible target pixels is exactly unchanged by deterioration, including the final sad-host state.
+4. A native and CSS-coordinate visible hit succeeds; a covered furniture hit fails; repeated catches cannot count twice.
+5. Every generated ten-target round uses valid distinct spots; the complete representative desktop/touch runs reach ten.
+
+The CSS-resolution test uniformly transforms the same vector composition into each actual scene size before measuring. This includes SVG antialiasing at narrow phone size, rather than assuming native-resolution fractions alone are sufficient. The phone touch test also runs at device pixel ratio 2.
+
+Raw counts, representative covered/visible points and invariance results live in `docs/evidence/catalog-*.json`. `#scene` has a nonvisual `data-visibility` diagnostic for the remaining guests and a `data-seed` code. These never highlight, reveal, or move squirrels for players.
+
+When authoring another hide: retain practical recognizable exposed features, add its clue in both languages, check every layer and safe UI zone, run the full catalog proof, inspect it on the narrow phone, and complete a real browser catch. Never fix a bad hide by reducing the floor, exposing normally concealed artwork through the lens, or expanding hit regions into solid furniture. Physical iOS/Android tap comfort and human difficulty remain acceptance checks, not consequences of a passing mask count.

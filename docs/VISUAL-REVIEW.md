@@ -1,6 +1,6 @@
 # Room 01 — Gate A visual review, revision 02
 
-**Status: implementation and automated QA complete for the visual study; human visual acceptance pending.** This is not a complete v1.0 game or a public release.
+**Archived Gate A report.** The user subsequently approved the visual baseline at `8e6c31e` and authorized Gate B. The measurements and 17-test report below describe that historical prototype. See [Gate B verification](GATE-B-REVIEW.md) for the current full implementation and [acceptance record](ACCEPTANCE.md) for the approval boundaries.
 
 ## Direction to review
 
@@ -97,10 +97,6 @@ Statuses apply to this Gate A artifact; production requirements remain open wher
 | C02 escalation | Pass | Full production held at explicit GDD visual gate; public release separate. |
 | C03 versioned standards | Not Applicable | Pinned UGDS retained unchanged; no standard changes proposed. |
 
-## Pending human decision and next stage
+## Gate A decision and handoff
 
-GDD §13 Gate A explicitly says: **“Stop for human visual acceptance before producing the complete game.”** Review the original art, squirrel recognizability, phone composition, optical magnifier and comparison mess states. Approve the direction or identify changes. No visual or gameplay acceptance has been recorded.
-
-After visual approval, Gate B will implement the full ten-target, seeded curated placement system; a race-safe 60-second active timer; time-driven deterioration; pause/resume and background behavior; mutually exclusive win/loss; animated host outcomes; randomized replay; and full core-rule, browser and balance QA. Existing study controls for manually selecting mess states will not replace the production timeline. Gate B will then require human gameplay acceptance. Gate C publication is separate and has not been requested.
-
-Still unverified: real iOS/Android touch and lens comfort; Safari/Firefox; human keyboard and screen-reader review; enlarged text/layout review beyond the tested defaults; native Chinese typography/copy review; first-time player success rate and balance; final animation/audio appeal. Browser emulation and axe do not establish these.
+The GDD required visual acceptance before full production. The user explicitly approved the revision at commit `8e6c31e`, including its characters, cottage, responsive layouts and light-purple background. Gate B implementation is now documented separately in [GATE-B-REVIEW.md](GATE-B-REVIEW.md). The checklist above records the earlier prototype's scope and verification, not the current game's feature coverage. The GDD and pinned UGDS source copies remain unchanged.

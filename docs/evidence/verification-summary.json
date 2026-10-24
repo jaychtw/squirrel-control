@@ -1,0 +1,313 @@
+{
+  "fullRun": {
+    "stats": {
+      "startTime": "2026-10-24T17:12:52.095Z",
+      "duration": 92019.62000000001,
+      "expected": 51,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "tests": [
+      {
+        "file": "core.spec.ts",
+        "title": "a round needs exactly ten unique targets and starts only deliberately",
+        "status": "passed"
+      },
+      {
+        "file": "core.spec.ts",
+        "title": "active time excludes repeated pauses and pauses suspend capture and mess",
+        "status": "passed"
+      },
+      {
+        "file": "core.spec.ts",
+        "title": "time-driven stage at 14999 ms",
+        "status": "passed"
+      },
+      {
+        "file": "core.spec.ts",
+        "title": "time-driven stage at 15000 ms",
+        "status": "passed"
+      },
+      {
+        "file": "core.spec.ts",
+        "title": "time-driven stage at 29999 ms",
+        "status": "passed"
+      },
+      {
+        "file": "core.spec.ts",
+        "title": "time-driven stage at 30000 ms",
+        "status": "passed"
+      },
+      {
+        "file": "core.spec.ts",
+        "title": "time-driven stage at 44999 ms",
+        "status": "passed"
+      },
+      {
+        "file": "core.spec.ts",
+        "title": "time-driven stage at 45000 ms",
+        "status": "passed"
+      },
+      {
+        "file": "core.spec.ts",
+        "title": "time-driven stage at 59999 ms",
+        "status": "passed"
+      },
+      {
+        "file": "core.spec.ts",
+        "title": "time-driven stage at 60000 ms",
+        "status": "passed"
+      },
+      {
+        "file": "core.spec.ts",
+        "title": "deadline is race-safe at 59999 ms, sync first false",
+        "status": "passed"
+      },
+      {
+        "file": "core.spec.ts",
+        "title": "deadline is race-safe at 59999 ms, sync first true",
+        "status": "passed"
+      },
+      {
+        "file": "core.spec.ts",
+        "title": "deadline is race-safe at 60000 ms, sync first false",
+        "status": "passed"
+      },
+      {
+        "file": "core.spec.ts",
+        "title": "deadline is race-safe at 60000 ms, sync first true",
+        "status": "passed"
+      },
+      {
+        "file": "core.spec.ts",
+        "title": "deadline is race-safe at 60001 ms, sync first false",
+        "status": "passed"
+      },
+      {
+        "file": "core.spec.ts",
+        "title": "deadline is race-safe at 60001 ms, sync first true",
+        "status": "passed"
+      },
+      {
+        "file": "core.spec.ts",
+        "title": "restart constructs independent state, time, target set and capture history",
+        "status": "passed"
+      },
+      {
+        "file": "core.spec.ts",
+        "title": "10,000 reproducible seeds always select ten distinct authored spots and every spot participates",
+        "status": "passed"
+      },
+      {
+        "file": "core.spec.ts",
+        "title": "URL room codes are bounded and reject markup or malformed input",
+        "status": "passed"
+      },
+      {
+        "file": "core.spec.ts",
+        "title": "preferences validate both shape and types, including blocked storage",
+        "status": "passed"
+      },
+      {
+        "file": "core.spec.ts",
+        "title": "every authored clue and every interface key exists in both languages",
+        "status": "passed"
+      },
+      {
+        "file": "room.spec.ts",
+        "title": "complete responsive hunt 320 en",
+        "status": "passed"
+      },
+      {
+        "file": "room.spec.ts",
+        "title": "complete responsive hunt 320 zh-TW",
+        "status": "passed"
+      },
+      {
+        "file": "room.spec.ts",
+        "title": "complete responsive hunt 390 en",
+        "status": "passed"
+      },
+      {
+        "file": "room.spec.ts",
+        "title": "complete responsive hunt 390 zh-TW",
+        "status": "passed"
+      },
+      {
+        "file": "room.spec.ts",
+        "title": "complete responsive hunt 768 en",
+        "status": "passed"
+      },
+      {
+        "file": "room.spec.ts",
+        "title": "complete responsive hunt 768 zh-TW",
+        "status": "passed"
+      },
+      {
+        "file": "room.spec.ts",
+        "title": "complete responsive hunt 1440 en",
+        "status": "passed"
+      },
+      {
+        "file": "room.spec.ts",
+        "title": "complete responsive hunt 1440 zh-TW",
+        "status": "passed"
+      },
+      {
+        "file": "room.spec.ts",
+        "title": "covered furniture cannot catch; duplicate clicks do not count; replay resets state and seed",
+        "status": "passed"
+      },
+      {
+        "file": "room.spec.ts",
+        "title": "pause, instructions, settings and restart confirmation suspend active time and reject room input",
+        "status": "passed"
+      },
+      {
+        "file": "room.spec.ts",
+        "title": "loss freezes captures, reveals full mess, and retries cleanly at 390",
+        "status": "passed"
+      },
+      {
+        "file": "room.spec.ts",
+        "title": "loss freezes captures, reveals full mess, and retries cleanly at 1440",
+        "status": "passed"
+      },
+      {
+        "file": "room.spec.ts",
+        "title": "desktop magnifier is optical, unlimited and keyboard-operable without changing clock speed",
+        "status": "passed"
+      },
+      {
+        "file": "room.spec.ts",
+        "title": "real touch drag inspects without catching, offset lens keeps occlusion, and ten touch catches win",
+        "status": "passed"
+      },
+      {
+        "file": "room.spec.ts",
+        "title": "language changes retain state; text guide is a complete timed nonvisual alternative",
+        "status": "passed"
+      },
+      {
+        "file": "room.spec.ts",
+        "title": "backgrounding auto-pauses and never auto-resumes on visibility return",
+        "status": "passed"
+      },
+      {
+        "file": "room.spec.ts",
+        "title": "responsive transition keeps IDs, count, time and cached reachability",
+        "status": "passed"
+      },
+      {
+        "file": "room.spec.ts",
+        "title": "settings persist, reduced motion is honored, and large text stays usable at 320 and 390",
+        "status": "passed"
+      },
+      {
+        "file": "room.spec.ts",
+        "title": "corrupt or blocked storage cannot prevent play: blocked false",
+        "status": "passed"
+      },
+      {
+        "file": "room.spec.ts",
+        "title": "corrupt or blocked storage cannot prevent play: blocked true",
+        "status": "passed"
+      },
+      {
+        "file": "room.spec.ts",
+        "title": "production play needs no external requests",
+        "status": "passed"
+      },
+      {
+        "file": "room.spec.ts",
+        "title": "accessibility scans cover bilingual intro, game, all dialogs, outcomes and large text",
+        "status": "passed"
+      },
+      {
+        "file": "room.spec.ts",
+        "title": "unmocked browser clock counts down to a real 60-second loss",
+        "status": "passed"
+      },
+      {
+        "file": "room.spec.ts",
+        "title": "a tenth catch with one millisecond left wins and a later frame cannot turn it into a loss",
+        "status": "passed"
+      },
+      {
+        "file": "visibility.spec.ts",
+        "title": "all 13 authored hides have stable visible masks, no crop or overlaps: desktop",
+        "status": "passed"
+      },
+      {
+        "file": "visibility.spec.ts",
+        "title": "all 13 authored hides have stable visible masks, no crop or overlaps: portrait",
+        "status": "passed"
+      },
+      {
+        "file": "visibility.spec.ts",
+        "title": "actual CSS-resolution silhouettes stay exposed through all mess stages at 320px",
+        "status": "passed"
+      },
+      {
+        "file": "visibility.spec.ts",
+        "title": "actual CSS-resolution silhouettes stay exposed through all mess stages at 390px",
+        "status": "passed"
+      },
+      {
+        "file": "visibility.spec.ts",
+        "title": "actual CSS-resolution silhouettes stay exposed through all mess stages at 768px",
+        "status": "passed"
+      },
+      {
+        "file": "visibility.spec.ts",
+        "title": "actual CSS-resolution silhouettes stay exposed through all mess stages at 1440px",
+        "status": "passed"
+      }
+    ]
+  },
+  "browser": "Chromium 154.0.8037.57",
+  "node": "24.19.0",
+  "visualBaseline": "8e6c31eb81d7a8438bdfc72b001fac24d866dafc",
+  "unmockedRoundWallMs": 60121,
+  "note": "Full suite passed; CSS resolution confirmation is also recorded separately after correcting the desktop scene width to the actual 1118 CSS px.",
+  "cssResolutionConfirmation": {
+    "stats": {
+      "startTime": "2026-10-24T17:16:48.218Z",
+      "duration": 5646.7570000000005,
+      "expected": 4,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "samples": [
+      {
+        "viewport": 1440,
+        "sceneWidth": 1118,
+        "minimumRatio": 0.4326636164710563,
+        "limitingSpot": "sofa-left"
+      },
+      {
+        "viewport": 320,
+        "sceneWidth": 296,
+        "minimumRatio": 0.40979689366786143,
+        "limitingSpot": "arm"
+      },
+      {
+        "viewport": 390,
+        "sceneWidth": 358,
+        "minimumRatio": 0.410958904109589,
+        "limitingSpot": "arm"
+      },
+      {
+        "viewport": 768,
+        "sceneWidth": 716,
+        "minimumRatio": 0.4315841098577734,
+        "limitingSpot": "sofa-left"
+      }
+    ]
+  },
+  "artifact": {
+    "index-BqoC0M3G.js": "55403aec683d0bc3e56d8eb356594039e4f242b10f6baff726e492c0b9121871"
+  }
+}

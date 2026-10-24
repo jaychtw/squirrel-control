@@ -1,27 +1,29 @@
 # Squirrel Control
 
-An original, cozy illustrated hidden-character game for desktop and mobile web. This build is the **Gate A interactive visual proof of concept**, based on [GDD v1.0](docs/GDD-v1.0.md). Full production follows explicit visual acceptance.
+**Room 1 — Miss Bunny’s Home · Gate B review candidate, v1.0.0-rc.1**
 
-## Review the prototype
+Find ten adorable squirrels in sixty seconds while Miss Bunny’s cozy cottage slips into delightful chaos. Original layered artwork, English and Traditional Chinese, desktop and touch controls, and no backend or runtime network services.
 
-**Visual revision 02 — 2026-10-25:** redesigned rounded characters and a warmer illustrated cottage, with a solid light-purple page background (`#e4cdf4`) and plum controls. The supplied movie-still montage informed broad visual qualities; all game artwork is original.
+The visual baseline at [`8e6c31e`](https://github.com/jaychtw/squirrel-control/commit/8e6c31eb81d7a8438bdfc72b001fac24d866dafc) was explicitly approved for Gate A. This implementation preserves its character designs, cottage palette, responsive composition and solid light-purple page background (`#e4cdf4`). **Gate B gameplay/production acceptance is pending. Public deployment is not authorized.**
 
-![Room 01 desktop visual study](docs/evidence/room-1440-en-tidy.png)
+## Review on GitHub
 
-[Character study](docs/evidence/character-study.png) · [Phone view](docs/evidence/room-390-en-tidy.png) · [Messy room](docs/evidence/room-1440-en-messy.png) · [Touch magnifier](docs/evidence/magnifier-390.png) · [Traditional Chinese](docs/evidence/room-390-zh-TW-messy.png) · [Visual review and QA](docs/VISUAL-REVIEW.md)
+![Room 1 gameplay, desktop](docs/evidence/gameplay-1440-en-tidy.png)
 
-The images and report can be reviewed directly on GitHub. Run the project locally to try the interactions.
+[Phone gameplay](docs/evidence/gameplay-390-en-tidy.png) · [Messy room](docs/evidence/gameplay-1440-en-messy.png) · [Success](docs/evidence/gameplay-1440-en-win.png) · [Failure](docs/evidence/gameplay-390-zh-TW-loss.png) · [Touch magnifier](docs/evidence/gameplay-magnifier-390.png) · [Gate B verification report](docs/GATE-B-REVIEW.md)
 
-## Run
+These are screenshots of the running static build. The report distinguishes controlled-clock checks, real elapsed-time validation and pending human checks. The approved Gate A character sheet and room screenshots remain in `docs/evidence` and Git history.
 
-Requires Node.js 22.12+ (tested: 24.19.0) and npm.
+## Run locally
+
+Node.js **24** and npm; `.node-version` pins the tested runtime to 24.19.0.
 
 ```sh
-npm ci --cache /workspace/.npm
+npm ci
 npm run dev
 ```
 
-No backend, keys, accounts, or runtime network services. Illustrations are original inline layered SVG; fonts are bundled locally under their package SIL Open Font Licenses. The production build uses relative asset paths, including when hosted in a subdirectory.
+In this cloud workspace the working directory is `/workspace/squirrel-control`; use `npm ci --cache /workspace/.npm` if the default home cache is not writable. No tool activation, credentials or additional services are needed.
 
 ```sh
 npm run build
@@ -29,36 +31,35 @@ npm run preview
 npm test
 ```
 
-Browser tests use `/usr/bin/chromium` when installed. Otherwise install Playwright Chromium (`npx playwright install chromium`) or set `CHROMIUM_PATH` to an installed executable. The test runner builds and starts its own production preview on port 4173; do not start another process on that port before running tests.
+`build` runs strict TypeScript checks and creates `dist/` with relative asset paths. `npm test` builds and starts its own production preview on port **4173**; leave that port free. It runs core-rule tests, full rendered visibility validation, desktop/touch gameplay, localization, preferences, accessibility scans and a real 60-second countdown. Tests normally take about 90 seconds with two workers. Tests use `/usr/bin/chromium` if present; otherwise install the Playwright browser with `npx playwright install chromium` or set `CHROMIUM_PATH` to an installed Chromium executable.
 
-## This visual study
+## Play
 
-- One complete layered living-room composition with original Miss Bunny and four illustrative squirrel hiding spots.
-- Dedicated portrait composition below 621 CSS px; desktop composition for wider screens.
-- Catch visible fur only. The full composited SVG is also the authoritative raster hit mask: solid furniture cannot catch a covered target.
-- Optical 2.25× magnifier, pointer and keyboard inspection, offset touch preview, drag/tap discrimination.
-- Three deliberately selectable room-mess states for visual comparison. They do not change target visibility.
-- Live English / Traditional Chinese, reduced-motion and synthesized sound preferences, keyboard controls, text-clue catching alternative, restart confirmation, automatic pause when the page becomes hidden.
-- Four-catch celebration and replay, for evaluating feedback and Miss Bunny's reaction.
+Press **Start the hunt** to begin. Catch squirrels by clicking/tapping their visible ears, bodies or tails. Furniture is opaque and the counter advances only once per squirrel. All ten must be found before 60 active seconds; at exactly the deadline the result is a loss.
 
-The displayed **01:00 is a clearly labeled clock preview**. This build does not yet contain the complete ten-squirrel, randomized, timed game. It does not simulate a passed production gate. Full timing, seeded ten-target placement, time-driven deterioration, loss/retry, complete audio/animation balancing, and production acceptance belong to Gate B after visual approval. Source is provided on `main` for visual review. The game has not been deployed.
+- **Magnifier / M:** unlimited optical inspection at 2.25×, with no added time/score penalty, cooldown or automatic target highlighting. Time continues normally. On touch, drag to inspect; lift and tap a visible squirrel to catch it. A drag cannot capture.
+- **Keyboard:** Tab to the room. Arrows move inspection, Shift + arrows move farther, Enter/Space catches at its center, Escape dismisses the lens, and P pauses. Menus, restart and outcomes are keyboard accessible.
+- **Pause:** explicit pause, instructions, settings and restart confirmation stop time, mess and scene interaction. Backgrounding the tab automatically pauses; returning does not resume until you choose to continue.
+- **Room guide:** an easier timed nonvisual alternative, with descriptive clues and catch buttons. Its clock continues while the guide is open; it has its own pause control. The visual hunt and text hunt share the same targets, timer and outcomes.
+- **Replay:** starts a fresh seeded selection of ten out of thirteen authored hides. Restarting an active round, even before any captures, requires confirmation.
+- **Comfort settings:** live language switching, reduced motion, optional synthesized sound, larger text, and the room code. Only preferences are saved locally; a short round starts fresh on page reload. Blocked/corrupt storage is supported.
 
-## Controls
+## Reproduce a round
 
-Begin with **Let's take a peek**, then click/tap exposed squirrels. Enable the magnifier with its button or **M**. Drag on touch to inspect without catching, lift, then tap a visible squirrel. The lens preserves furniture occlusion; it never highlights or reveals targets. **Escape** dismisses the lens or dialog. With the room focused, arrow keys move inspection; **Shift + arrow** moves farther; **Enter / Space** catches at the inspected point. Tab accesses all menus. The **Room guide** supplies readable clues and explicit catch buttons for a nonvisual alternative; it intentionally makes the hunt easier.
+Use `?seed=review-room-01` on the app URL to reproduce the documented round. Seeds accept 1–48 ASCII letters, digits, `_` or `-`; invalid seeds are ignored. The same seed selects the same guests and fur variants across desktop/portrait layouts. Copy the code from comfort settings for a bug report. Replay generates a new code; it does not change the URL or force repeats from a previous query parameter.
 
-Preference storage is optional and validated. Blocked/corrupt storage cannot prevent the scene from loading. Only language, motion, and sound settings are stored; a room study starts fresh on reload.
+## Engineering
 
-## Project map
+- `src/game.ts`: authoritative phases, monotonic active-time clock, capture rules and exclusive deadline outcomes.
+- `src/placements.ts`: authored two-layout pool and deterministic seeded selection.
+- `src/room.ts`: approved original artwork, foreground hide geometry, safe mess sublayer and host reactions.
+- `src/hit-map.ts`: composited pixel hit masks, actual-silhouette ratios, crop/overlap diagnostics and target-pixel invariance.
+- `src/main.ts`: application lifecycle, gestures, optical lens, dialogs, timer display and feedback.
+- `src/preferences.ts`, `src/i18n.ts`, `src/icons.ts`, `src/style.css`: validated persistence, bilingual copy, icons and approved theme.
+- `tests/core.spec.ts`, `tests/visibility.spec.ts`, `tests/room.spec.ts`: core rules, native/CSS-resolution geometry, actual browser play and evidence.
 
-- `src/room.ts`: original artwork, L0/L1/L2/L3 composition and two curated layouts.
-- `src/hit-map.ts`: rendered silhouette validation and authoritative pixel hit testing.
-- `src/main.ts`: input gestures, optical lens, transient room state, dialogs, feedback and preferences.
-- `src/i18n.ts`: all interface and accessibility copy in both languages.
-- `src/style.css`: responsive lavender-and-cream interface and motion preferences.
-- `tests/room.spec.ts`: production-browser interactions, touch emulation, visual evidence, visibility and accessibility checks.
-- [Visual review and QA](docs/VISUAL-REVIEW.md), [hiding-spot authoring](docs/HIDING-SPOTS.md).
+[Hiding-spot authoring and proof](docs/HIDING-SPOTS.md) · [Gate B QA / acceptance checklist](docs/GATE-B-REVIEW.md) · [Acceptance record](docs/ACCEPTANCE.md) · [GDD v1.0](docs/GDD-v1.0.md)
 
-To regenerate the standalone character sheet on Node.js 24+, run `node scripts/render-character-study.mjs`. The normal browser tests refresh the room and magnifier screenshots.
+The pinned engineering baseline is [UGDS v1.0.0](docs/UGDS-v1.0.0.md), `jaychtw/game-development-standards@d5c6696efdd6efc028118600466db44aecae0c9b`. Neither standard was rewritten. Match3 Core is not used. The original art is individually composited SVG; fonts are bundled locally with their SIL Open Font License notices in `public/licenses`. No external runtime assets, accounts, analytics, ads or payments.
 
-Engineering baseline: [UGDS v1.0.0](docs/UGDS-v1.0.0.md), pinned to `jaychtw/game-development-standards@d5c6696efdd6efc028118600466db44aecae0c9b`. Match3 Core is not used. The other match-game references are process references; no code or artwork was copied.
+The development-only `node scripts/render-character-study.mjs` export regenerates the approved character-study sheet on Node 24. It is not a gameplay screenshot or evidence of final acceptance.

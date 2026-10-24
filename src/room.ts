@@ -53,27 +53,8 @@ export function squirrel(p: Placement): string {
   </g>`,`data-squirrel="${p.id}"`);
 }
 
-export function makeLayout(mobile: boolean): RoomLayout {
-  return mobile ? {
-    width:640,height:820,mobile,
-    targets:[
-      {id:'curtain',x:77,y:199,scale:.9,variant:0,clue:'curtain'},
-      {id:'sofa',x:335,y:285,scale:.94,variant:1,clue:'sofa'},
-      {id:'cabinet',x:521,y:381,scale:.94,variant:2,clue:'cabinet'},
-      {id:'basket',x:53,y:580,scale:1.03,variant:3,clue:'basket'},
-    ],
-  } : {
-    width:1120,height:650,mobile,
-    targets:[
-      {id:'curtain',x:163,y:169,scale:.9,variant:0,clue:'curtain'},
-      {id:'sofa',x:555,y:233,scale:.94,variant:1,clue:'sofa'},
-      {id:'cabinet',x:939,y:266,scale:.94,variant:2,clue:'cabinet'},
-      {id:'basket',x:135,y:433,scale:1.03,variant:3,clue:'basket'},
-    ],
-  };
-}
-
-export function bunny(x:number,y:number,s:number,happy:boolean):string {
+export function bunny(x:number,y:number,s:number,reaction:boolean | 'sad'):string {
+  const happy = reaction === true, sad = reaction === 'sad';
   // Asymmetric ears, a cloud-shaped silhouette, a linen pinafore, and a petal-shaped nose.
   return group(x,y,s,`<g ${strokes} stroke-width="2.9">
     ${ellipse(76,178,65,10,'#6f6043','stroke="none" opacity=".16"')}
@@ -87,9 +68,9 @@ export function bunny(x:number,y:number,s:number,happy:boolean):string {
     ${path('M65 146Q79 151 94 146V158Q79 166 65 157Z','#e9edd1','stroke="#859576" stroke-width="1.5"')}
     ${path('M74 155Q78 148 84 154Q81 161 74 155Z','#b39bc5','stroke="#8b759b" stroke-width="1"')}
     ${blush(37,108,1.1)}${blush(117,108,1.1)}
-    ${happy ? `${line('M48 93Q54 84 61 93',ink,2.8)}${line('M93 93Q100 84 107 93',ink,2.8)}` : `${ellipse(54,94,3,4.3,ink,'stroke="none"')}${ellipse(100,94,3,4.3,ink,'stroke="none"')}${ellipse(53,92.5,.9,1,'#fff9e8','stroke="none"')}${ellipse(99,92.5,.9,1,'#fff9e8','stroke="none"')}`}
+    ${sad ? `${line('M48 94Q53 98 59 95',ink,2.4)}${line('M95 95Q100 98 106 94',ink,2.4)}${line('M48 87L59 85M95 85L106 87','#9a825b',1.5)}` : happy ? `${line('M48 93Q54 84 61 93',ink,2.8)}${line('M93 93Q100 84 107 93',ink,2.8)}` : `${ellipse(54,94,3,4.3,ink,'stroke="none"')}${ellipse(100,94,3,4.3,ink,'stroke="none"')}${ellipse(53,92.5,.9,1,'#fff9e8','stroke="none"')}${ellipse(99,92.5,.9,1,'#fff9e8','stroke="none"')}`}
     ${path('M72 103Q76 97 80 103Q84 99 85 104Q83 109 78 111Q72 108 72 103Z','#c99380','stroke="none"')}
-    ${line(happy ? 'M67 114Q78 132 90 113Q78 119 67 114Z' : 'M69 116Q74 122 79 116Q84 122 90 116',ink,1.8)}
+    ${line(sad ? 'M70 121Q78 114 87 121' : happy ? 'M67 114Q78 132 90 113Q78 119 67 114Z' : 'M69 116Q74 122 79 116Q84 122 90 116',ink,1.8)}
     ${path(happy ? 'M24 137Q4 122 5 109Q8 100 16 106L35 125M127 135Q149 120 148 107Q144 99 137 108L120 126' : 'M23 134Q12 145 20 151Q29 158 38 143M129 134Q143 145 134 152Q124 158 117 143','#fff0b7')}
     ${path('M39 165Q23 177 35 182Q43 186 57 180L60 173M103 173L107 181Q126 186 132 179Q136 173 118 165','#fff0b7')}
     ${line('M37 176L42 177M122 176L117 177',ink,1.5)}
@@ -244,7 +225,7 @@ function rug(x:number,y:number,rx:number,ry:number) {
   </g>`;
 }
 
-export function renderRoom(layout:RoomLayout,caught:Set<string>,stage:number):string {
+export function renderRoom(layout:RoomLayout,caught:Set<string>,stage:number,outcome:'idle'|'running'|'paused'|'won'|'lost'='idle'):string {
   const {mobile:m,width:w,height:h} = layout, floor=m?555:433;
   const defs = `<defs>
     <linearGradient id="wall" x2="0" y2="1"><stop stop-color="#f6e9cd"/><stop offset="1" stop-color="#efddba"/></linearGradient>
@@ -271,9 +252,8 @@ export function renderRoom(layout:RoomLayout,caught:Set<string>,stage:number):st
     ${Array.from({length:9},(_,i)=>line(`M${40+i*113} ${floor+55+(i%3)*43}q24-3 40 0m-25 4q14-2 20 0`,'#bc9468',.8)).join('')}
     ${windowArt(m?59:139,m?66:43,m?.91:1)}
     ${path(m?'M82 282L284 111L526 555H70Z':'M156 263L348 101L786 434H212Z','url(#sunbeam)')}
-    ${group(m?276:435,m?88:64,m?.81:1,`<g ${strokes} stroke-width="2.3">${rect(0,0,132,119,6,'#b18b69')}${rect(7,7,118,105,2,'#fdf1d4')}${path('M37 91Q28 77 44 66Q27 48 42 37Q56 33 65 52Q71 26 84 32Q100 41 83 61Q100 76 86 89Z','#a7b68d','stroke="#7c926b" stroke-width="1.5"')}${line('M63 91L64 49M64 69L47 52M64 77L80 51','#71845d',1.8)}${path('M44 88H86L78 103H52Z','#ddb699','stroke="#a68164" stroke-width="1.4"')}${ellipse(30,28,4,4,'#d4b8c9','stroke="none"')}${ellipse(99,94,3,3,'#d4b8c9','stroke="none"')}</g>`)}
-    ${portrait(m?423:625,m?156:123,m?.65:.76,stage>0?-12:0)}
-    ${clock(m?449:741,m?75:72,m?.63:.82)}
+
+    ${group(m?449:741,m?75:72,1,`<g transform="rotate(${stage>1?12:0})">${clock(0,0,m?.63:.82)}</g>`)}
     ${shelf(m?485:810,m?65:74,m?.7:1)}
     ${rug(m?321:555,m?650:539,m?255:337,m?102:82)}
     ${plant(m?590:1049,m?558:450,m?.78:1.05)}
@@ -283,7 +263,13 @@ export function renderRoom(layout:RoomLayout,caught:Set<string>,stage:number):st
   </g>`;
   const targets=`<g data-layer="L1">${layout.targets.filter(p=>!caught.has(p.id)).map(squirrel).join('')}</g>`;
   const furniture=`<g data-layer="L2" ${strokes}>
+    ${group(m?276:435,m?88:64,m?.81:1,`<g ${strokes} stroke-width="2.3">${rect(0,0,132,119,6,'#b18b69')}${rect(7,7,118,105,2,'#fdf1d4')}${path('M37 91Q28 77 44 66Q27 48 42 37Q56 33 65 52Q71 26 84 32Q100 41 83 61Q100 76 86 89Z','#a7b68d','stroke="#7c926b" stroke-width="1.5"')}${line('M63 91L64 49M64 69L47 52M64 77L80 51','#71845d',1.8)}${path('M44 88H86L78 103H52Z','#ddb699','stroke="#a68164" stroke-width="1.4"')}${ellipse(30,28,4,4,'#d4b8c9','stroke="none"')}${ellipse(99,94,3,3,'#d4b8c9','stroke="none"')}</g>`)}
+    ${portrait(m?423:625,m?156:123,m?.65:.76,0)}
     ${group(m?55:139,m?261:231,1,`${path('M0 0Q31-14 61-1L65 43Q34 48 3 42Z','#e6bcc0','stroke="#8e6e67" stroke-width="2"')}${path('M0 0Q31-14 61-1L65 43Q34 48 3 42Z','url(#gingham)','stroke="none"')}${line('M6 3Q30 10 57 1M17 14L18 36M42 13L44 38','#b58e96',1.3)}${path('M-2 0Q25-6 60-2L61 5Q26 2-1 7Z','#f3dbb2','stroke="#a98b63" stroke-width="1.2"')}`)}
+    ${group(m?240:343,m?261:211,1,`${path('M0 0Q31-14 61-1L65 50Q34 55 3 49Z','#e6bcc0','stroke="#8e6e67" stroke-width="2"')}${path('M0 0Q31-14 61-1L65 50Q34 55 3 49Z','url(#gingham)','stroke="none"')}${line('M6 3Q30 10 57 1M17 14L18 42M42 13L44 45','#b58e96',1.3)}${path('M-2 0Q25-6 60-2L61 5Q26 2-1 7Z','#f3dbb2','stroke="#a98b63" stroke-width="1.2"')}`)}
+    ${group(m?338:740,m?254:219,1,`<g ${strokes} stroke-width="2">${path('M0 0Q53-5 106 0V33Q53 39 0 33Z','#cca681')}${path('M6 6L25 2L30 19L11 23Z','#fff0d5','stroke="#b09a7b" stroke-width="1.2"')}${path('M60 8L87 3L93 22L65 27Z','#e4d8eb','stroke="#a28da9" stroke-width="1.2"')}${path('M-3 20Q53 13 109 20V33Q53 39-3 33Z','#bd916c')}${line('M3 25Q52 19 102 25','#e7c29b',1.3)}</g>`)}
+    ${group(m?40:72,m?493:402,m?.78:1.02,`<g ${strokes} stroke-width="2.2">${path('M-26-2H27L20 38Q0 50-20 38Z','#d79478')}${rect(-29,-6,60,12,4,'#e7b194')}${line('M-13 10L-10 29M-1 11V35M12 10L10 29','#f3ceb0',2)}${path('M-6 22Q0 15 6 22Q3 28-6 22Z','#f6d2b5','stroke="none"')}</g>`)}
+    ${group(m?114:245,m?535:520,1,`<g ${strokes} stroke-width="2">${rect(0,0,105,48,8,'#c4a8bd')}${path('M0 11Q51 1 105 11V20Q52 10 0 20Z','#e6cdd8')}${rect(36,21,33,12,4,'#f4e4d4','stroke="#ab8d9c" stroke-width="1.2"')}${line('M45 27H60','#b79aa7',1.3)}</g>`)}
     ${cabinet(m?505:910,m?445:330,m?.72:.94)}
     ${sofa(m?170:326,m?340:285,m?.79:1)}
     ${basket(m?38:118,m?650:507)}
@@ -292,7 +278,9 @@ export function renderRoom(layout:RoomLayout,caught:Set<string>,stage:number):st
   const mess=`<g data-layer="safe-mess" ${strokes} stroke-width="1.7" pointer-events="none">
     ${stage>0?`${group(m?433:723,m?710:565,.76,`<g transform="rotate(21)">${rect(0,0,82,65,17,'#e8bdcb')}${line('M10 14Q40 24 71 14M10 54Q41 44 71 54','#f5dce0',1.7)}${path('M35 25Q40 18 46 25Q51 30 45 37Q37 40 35 32Q27 29 35 25Z','#f2d8a8','stroke-width="1.1"')}</g>`)}${path(m?'M149 732L186 722L201 750L162 762Z':'M352 578L389 568L404 597L365 607Z','#fcf0d8','stroke="#a48d70" stroke-width="1.2"')}${line(m?'M162 737L182 732M167 745L187 738':'M365 583L385 577M369 591L390 585','#b3a890',1.2)}`:''}
     ${stage>1?`${group(m?328:605,m?749:590,.8,`${path('M0 0L51-8L66 20L16 32Z','#fbefd6')}${line('M9 7L46 0M16 17L51 9','#c1ac95',1.3)}`)}${group(m?544:1034,m?691:568,.77,`${ellipse(0,0,20,17,'#b9a6cd')}${line('M-17-4Q0 6 17-4M-17 4Q0 14 17 4M-4-16Q-13 0-3 16M7-15Q-3 0 7 16','#dfcfe7',1.5)}${line('M15 10Q47 40 58 9Q59-6 77 0','#977baa',2)}`)}${path(m?'M230 789q-8-12-15-3q6 12 15 3M490 768q-8-12-15-3q6 12 15 3':'M861 606q-8-12-15-3q6 12 15 3M318 551q-8-12-15-3q6 12 15 3','#a5b682','stroke="#7d956b" stroke-width="1.2"')}${group(m?78:70,m?749:544,.65,`${path('M0 0L24-7L39 19L15 27Z','#d4dfbc','stroke-width="1.2"')}${line('M10 6L24 3M14 13L28 10','#91a179',1)}`)}`:''}
+    ${stage>2?`${group(m?277:510,m?735:606,.78,`<g transform="rotate(-16)">${rect(0,0,63,36,5,'#d4b1c7')}${line('M7 9H55M7 16H55M8 24H52','#f2d9df',1.5)}</g>`)}${path(m?'M151 701L175 691L191 716L165 730Z':'M247 582L271 572L287 597L261 611Z','#fff0d6','stroke="#b19b7d" stroke-width="1.2"')}${line(m?'M160 704L176 700M166 712L182 708':'M256 585L272 581M262 593L278 589','#b6a58b',1.2)}${group(m?561:1015,m?746:605,.8,`${ellipse(0,0,11,6,'#c3b39c','stroke="none" opacity=".3"')}${path('M-11-8H11V1Q9 9 0 9Q-10 8-11 1Z','#f1d6ab')}${path('M11-6Q25-10 20 3Q16 7 11 3','none','stroke="#a18a6c" stroke-width="1.5"')}`)}`:''}
+    ${stage>3?`${path(m?'M214 760L255 750L268 786L227 796Z':'M916 587L957 577L970 613L929 623Z','#e8dfeb','stroke="#a99ab5" stroke-width="1.3"')}${line(m?'M228 767L249 761M231 775L254 769':'M930 594L951 588M933 602L956 596','#af9cba',1.3)}${group(m?373:399,m?770:610,.65,`${ellipse(0,0,20,12,'#c0cfaf')}${line('M-18-3Q0 7 18-3M-15 4Q0 13 15 4M-5-11Q-12 0-4 12','#e5e7c9',1.5)}${line('M18 4Q51 25 66 2','#9fae8b',2)}`)}${path(m?'M72 727l8-9 8 9-8 6Z':'M788 600l8-9 8 9-8 6Z','#e3c19a','stroke="#b69872" stroke-width="1"')}`:''}
   </g>`;
-  const host=`<g data-layer="L3">${bunny(m?426:786,m?578:410,m?.94:1.04,caught.size===layout.targets.length)}</g>`;
+  const host=`<g data-layer="L3" data-reaction="${outcome==='won'?'happy':outcome==='lost'?'sad':'neutral'}" class="host host-${outcome}">${bunny(m?426:786,m?578:410,m?.94:1.04,outcome==='lost'?'sad':outcome==='won')}</g>`;
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${h}" fill="none" stroke-width="2.5" aria-hidden="true" class="room-art">${defs}${bg}${targets}${furniture}${mess}${host}<rect width="${w}" height="${h}" fill="transparent" filter="url(#paper)" pointer-events="none"/></svg>`;
 }

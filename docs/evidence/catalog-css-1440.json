@@ -1,0 +1,1016 @@
+{
+  "viewport": 1440,
+  "sceneWidth": 1118,
+  "reports": [
+    {
+      "stage": 0,
+      "visibility": [
+        {
+          "id": "curtain",
+          "visiblePixels": 3316,
+          "silhouettePixels": 4596,
+          "ratio": 0.721496953872933,
+          "visiblePoint": {
+            "x": 171,
+            "y": 208
+          },
+          "hiddenPoint": {
+            "x": 192,
+            "y": 235
+          },
+          "cropped": false
+        },
+        {
+          "id": "curtain-right",
+          "visiblePixels": 3044,
+          "silhouettePixels": 4103,
+          "ratio": 0.7418961735315622,
+          "visiblePoint": {
+            "x": 360,
+            "y": 182
+          },
+          "hiddenPoint": {
+            "x": 372,
+            "y": 213
+          },
+          "cropped": false
+        },
+        {
+          "id": "sofa-left",
+          "visiblePixels": 2175,
+          "silhouettePixels": 5027,
+          "ratio": 0.4326636164710563,
+          "visiblePoint": {
+            "x": 412,
+            "y": 265
+          },
+          "hiddenPoint": {
+            "x": 412,
+            "y": 298
+          },
+          "cropped": false
+        },
+        {
+          "id": "sofa",
+          "visiblePixels": 2182,
+          "silhouettePixels": 5027,
+          "ratio": 0.43405609707579074,
+          "visiblePoint": {
+            "x": 553,
+            "y": 265
+          },
+          "hiddenPoint": {
+            "x": 558,
+            "y": 298
+          },
+          "cropped": false
+        },
+        {
+          "id": "sofa-right",
+          "visiblePixels": 2241,
+          "silhouettePixels": 4395,
+          "ratio": 0.5098976109215017,
+          "visiblePoint": {
+            "x": 676,
+            "y": 265
+          },
+          "hiddenPoint": {
+            "x": 698,
+            "y": 296
+          },
+          "cropped": false
+        },
+        {
+          "id": "cabinet",
+          "visiblePixels": 2623,
+          "silhouettePixels": 5029,
+          "ratio": 0.5215748657784848,
+          "visiblePoint": {
+            "x": 987,
+            "y": 300
+          },
+          "hiddenPoint": {
+            "x": 956,
+            "y": 334
+          },
+          "cropped": false
+        },
+        {
+          "id": "basket",
+          "visiblePixels": 3605,
+          "silhouettePixels": 6048,
+          "ratio": 0.5960648148148148,
+          "visiblePoint": {
+            "x": 156,
+            "y": 473
+          },
+          "hiddenPoint": {
+            "x": 171,
+            "y": 510
+          },
+          "cropped": false
+        },
+        {
+          "id": "plant",
+          "visiblePixels": 3021,
+          "silhouettePixels": 4914,
+          "ratio": 0.6147741147741148,
+          "visiblePoint": {
+            "x": 46,
+            "y": 380
+          },
+          "hiddenPoint": {
+            "x": 75,
+            "y": 408
+          },
+          "cropped": false
+        },
+        {
+          "id": "knitting",
+          "visiblePixels": 2572,
+          "silhouettePixels": 5021,
+          "ratio": 0.512248556064529,
+          "visiblePoint": {
+            "x": 269,
+            "y": 499
+          },
+          "hiddenPoint": {
+            "x": 309,
+            "y": 532
+          },
+          "cropped": false
+        },
+        {
+          "id": "picture",
+          "visiblePixels": 2364,
+          "silhouettePixels": 3621,
+          "ratio": 0.6528583264291632,
+          "visiblePoint": {
+            "x": 487,
+            "y": 41
+          },
+          "hiddenPoint": {
+            "x": 512,
+            "y": 70
+          },
+          "cropped": false
+        },
+        {
+          "id": "portrait",
+          "visiblePixels": 2028,
+          "silhouettePixels": 3639,
+          "ratio": 0.5572959604286892,
+          "visiblePoint": {
+            "x": 667,
+            "y": 108
+          },
+          "hiddenPoint": {
+            "x": 645,
+            "y": 136
+          },
+          "cropped": false
+        },
+        {
+          "id": "letters",
+          "visiblePixels": 2211,
+          "silhouettePixels": 4009,
+          "ratio": 0.5515091045148416,
+          "visiblePoint": {
+            "x": 812,
+            "y": 196
+          },
+          "hiddenPoint": {
+            "x": 763,
+            "y": 227
+          },
+          "cropped": false
+        },
+        {
+          "id": "arm",
+          "visiblePixels": 2035,
+          "silhouettePixels": 4607,
+          "ratio": 0.4417191230735837,
+          "visiblePoint": {
+            "x": 303,
+            "y": 363
+          },
+          "hiddenPoint": {
+            "x": 308,
+            "y": 381
+          },
+          "cropped": false
+        }
+      ],
+      "overlappingIds": [],
+      "stable": true
+    },
+    {
+      "stage": 1,
+      "visibility": [
+        {
+          "id": "curtain",
+          "visiblePixels": 3316,
+          "silhouettePixels": 4596,
+          "ratio": 0.721496953872933,
+          "visiblePoint": {
+            "x": 171,
+            "y": 208
+          },
+          "hiddenPoint": {
+            "x": 192,
+            "y": 235
+          },
+          "cropped": false
+        },
+        {
+          "id": "curtain-right",
+          "visiblePixels": 3044,
+          "silhouettePixels": 4103,
+          "ratio": 0.7418961735315622,
+          "visiblePoint": {
+            "x": 360,
+            "y": 182
+          },
+          "hiddenPoint": {
+            "x": 372,
+            "y": 213
+          },
+          "cropped": false
+        },
+        {
+          "id": "sofa-left",
+          "visiblePixels": 2175,
+          "silhouettePixels": 5027,
+          "ratio": 0.4326636164710563,
+          "visiblePoint": {
+            "x": 412,
+            "y": 265
+          },
+          "hiddenPoint": {
+            "x": 412,
+            "y": 298
+          },
+          "cropped": false
+        },
+        {
+          "id": "sofa",
+          "visiblePixels": 2182,
+          "silhouettePixels": 5027,
+          "ratio": 0.43405609707579074,
+          "visiblePoint": {
+            "x": 553,
+            "y": 265
+          },
+          "hiddenPoint": {
+            "x": 558,
+            "y": 298
+          },
+          "cropped": false
+        },
+        {
+          "id": "sofa-right",
+          "visiblePixels": 2241,
+          "silhouettePixels": 4395,
+          "ratio": 0.5098976109215017,
+          "visiblePoint": {
+            "x": 676,
+            "y": 265
+          },
+          "hiddenPoint": {
+            "x": 698,
+            "y": 296
+          },
+          "cropped": false
+        },
+        {
+          "id": "cabinet",
+          "visiblePixels": 2623,
+          "silhouettePixels": 5029,
+          "ratio": 0.5215748657784848,
+          "visiblePoint": {
+            "x": 987,
+            "y": 300
+          },
+          "hiddenPoint": {
+            "x": 956,
+            "y": 334
+          },
+          "cropped": false
+        },
+        {
+          "id": "basket",
+          "visiblePixels": 3605,
+          "silhouettePixels": 6048,
+          "ratio": 0.5960648148148148,
+          "visiblePoint": {
+            "x": 156,
+            "y": 473
+          },
+          "hiddenPoint": {
+            "x": 171,
+            "y": 510
+          },
+          "cropped": false
+        },
+        {
+          "id": "plant",
+          "visiblePixels": 3021,
+          "silhouettePixels": 4914,
+          "ratio": 0.6147741147741148,
+          "visiblePoint": {
+            "x": 46,
+            "y": 380
+          },
+          "hiddenPoint": {
+            "x": 75,
+            "y": 408
+          },
+          "cropped": false
+        },
+        {
+          "id": "knitting",
+          "visiblePixels": 2572,
+          "silhouettePixels": 5021,
+          "ratio": 0.512248556064529,
+          "visiblePoint": {
+            "x": 269,
+            "y": 499
+          },
+          "hiddenPoint": {
+            "x": 309,
+            "y": 532
+          },
+          "cropped": false
+        },
+        {
+          "id": "picture",
+          "visiblePixels": 2364,
+          "silhouettePixels": 3621,
+          "ratio": 0.6528583264291632,
+          "visiblePoint": {
+            "x": 487,
+            "y": 41
+          },
+          "hiddenPoint": {
+            "x": 512,
+            "y": 70
+          },
+          "cropped": false
+        },
+        {
+          "id": "portrait",
+          "visiblePixels": 2028,
+          "silhouettePixels": 3639,
+          "ratio": 0.5572959604286892,
+          "visiblePoint": {
+            "x": 667,
+            "y": 108
+          },
+          "hiddenPoint": {
+            "x": 645,
+            "y": 136
+          },
+          "cropped": false
+        },
+        {
+          "id": "letters",
+          "visiblePixels": 2211,
+          "silhouettePixels": 4009,
+          "ratio": 0.5515091045148416,
+          "visiblePoint": {
+            "x": 812,
+            "y": 196
+          },
+          "hiddenPoint": {
+            "x": 763,
+            "y": 227
+          },
+          "cropped": false
+        },
+        {
+          "id": "arm",
+          "visiblePixels": 2035,
+          "silhouettePixels": 4607,
+          "ratio": 0.4417191230735837,
+          "visiblePoint": {
+            "x": 303,
+            "y": 363
+          },
+          "hiddenPoint": {
+            "x": 308,
+            "y": 381
+          },
+          "cropped": false
+        }
+      ],
+      "overlappingIds": [],
+      "stable": true
+    },
+    {
+      "stage": 2,
+      "visibility": [
+        {
+          "id": "curtain",
+          "visiblePixels": 3316,
+          "silhouettePixels": 4596,
+          "ratio": 0.721496953872933,
+          "visiblePoint": {
+            "x": 171,
+            "y": 208
+          },
+          "hiddenPoint": {
+            "x": 192,
+            "y": 235
+          },
+          "cropped": false
+        },
+        {
+          "id": "curtain-right",
+          "visiblePixels": 3044,
+          "silhouettePixels": 4103,
+          "ratio": 0.7418961735315622,
+          "visiblePoint": {
+            "x": 360,
+            "y": 182
+          },
+          "hiddenPoint": {
+            "x": 372,
+            "y": 213
+          },
+          "cropped": false
+        },
+        {
+          "id": "sofa-left",
+          "visiblePixels": 2175,
+          "silhouettePixels": 5027,
+          "ratio": 0.4326636164710563,
+          "visiblePoint": {
+            "x": 412,
+            "y": 265
+          },
+          "hiddenPoint": {
+            "x": 412,
+            "y": 298
+          },
+          "cropped": false
+        },
+        {
+          "id": "sofa",
+          "visiblePixels": 2182,
+          "silhouettePixels": 5027,
+          "ratio": 0.43405609707579074,
+          "visiblePoint": {
+            "x": 553,
+            "y": 265
+          },
+          "hiddenPoint": {
+            "x": 558,
+            "y": 298
+          },
+          "cropped": false
+        },
+        {
+          "id": "sofa-right",
+          "visiblePixels": 2241,
+          "silhouettePixels": 4395,
+          "ratio": 0.5098976109215017,
+          "visiblePoint": {
+            "x": 676,
+            "y": 265
+          },
+          "hiddenPoint": {
+            "x": 698,
+            "y": 296
+          },
+          "cropped": false
+        },
+        {
+          "id": "cabinet",
+          "visiblePixels": 2623,
+          "silhouettePixels": 5029,
+          "ratio": 0.5215748657784848,
+          "visiblePoint": {
+            "x": 987,
+            "y": 300
+          },
+          "hiddenPoint": {
+            "x": 956,
+            "y": 334
+          },
+          "cropped": false
+        },
+        {
+          "id": "basket",
+          "visiblePixels": 3605,
+          "silhouettePixels": 6048,
+          "ratio": 0.5960648148148148,
+          "visiblePoint": {
+            "x": 156,
+            "y": 473
+          },
+          "hiddenPoint": {
+            "x": 171,
+            "y": 510
+          },
+          "cropped": false
+        },
+        {
+          "id": "plant",
+          "visiblePixels": 3021,
+          "silhouettePixels": 4914,
+          "ratio": 0.6147741147741148,
+          "visiblePoint": {
+            "x": 46,
+            "y": 380
+          },
+          "hiddenPoint": {
+            "x": 75,
+            "y": 408
+          },
+          "cropped": false
+        },
+        {
+          "id": "knitting",
+          "visiblePixels": 2572,
+          "silhouettePixels": 5021,
+          "ratio": 0.512248556064529,
+          "visiblePoint": {
+            "x": 269,
+            "y": 499
+          },
+          "hiddenPoint": {
+            "x": 309,
+            "y": 532
+          },
+          "cropped": false
+        },
+        {
+          "id": "picture",
+          "visiblePixels": 2364,
+          "silhouettePixels": 3621,
+          "ratio": 0.6528583264291632,
+          "visiblePoint": {
+            "x": 487,
+            "y": 41
+          },
+          "hiddenPoint": {
+            "x": 512,
+            "y": 70
+          },
+          "cropped": false
+        },
+        {
+          "id": "portrait",
+          "visiblePixels": 2028,
+          "silhouettePixels": 3639,
+          "ratio": 0.5572959604286892,
+          "visiblePoint": {
+            "x": 667,
+            "y": 108
+          },
+          "hiddenPoint": {
+            "x": 645,
+            "y": 136
+          },
+          "cropped": false
+        },
+        {
+          "id": "letters",
+          "visiblePixels": 2211,
+          "silhouettePixels": 4009,
+          "ratio": 0.5515091045148416,
+          "visiblePoint": {
+            "x": 812,
+            "y": 196
+          },
+          "hiddenPoint": {
+            "x": 763,
+            "y": 227
+          },
+          "cropped": false
+        },
+        {
+          "id": "arm",
+          "visiblePixels": 2035,
+          "silhouettePixels": 4607,
+          "ratio": 0.4417191230735837,
+          "visiblePoint": {
+            "x": 303,
+            "y": 363
+          },
+          "hiddenPoint": {
+            "x": 308,
+            "y": 381
+          },
+          "cropped": false
+        }
+      ],
+      "overlappingIds": [],
+      "stable": true
+    },
+    {
+      "stage": 3,
+      "visibility": [
+        {
+          "id": "curtain",
+          "visiblePixels": 3316,
+          "silhouettePixels": 4596,
+          "ratio": 0.721496953872933,
+          "visiblePoint": {
+            "x": 171,
+            "y": 208
+          },
+          "hiddenPoint": {
+            "x": 192,
+            "y": 235
+          },
+          "cropped": false
+        },
+        {
+          "id": "curtain-right",
+          "visiblePixels": 3044,
+          "silhouettePixels": 4103,
+          "ratio": 0.7418961735315622,
+          "visiblePoint": {
+            "x": 360,
+            "y": 182
+          },
+          "hiddenPoint": {
+            "x": 372,
+            "y": 213
+          },
+          "cropped": false
+        },
+        {
+          "id": "sofa-left",
+          "visiblePixels": 2175,
+          "silhouettePixels": 5027,
+          "ratio": 0.4326636164710563,
+          "visiblePoint": {
+            "x": 412,
+            "y": 265
+          },
+          "hiddenPoint": {
+            "x": 412,
+            "y": 298
+          },
+          "cropped": false
+        },
+        {
+          "id": "sofa",
+          "visiblePixels": 2182,
+          "silhouettePixels": 5027,
+          "ratio": 0.43405609707579074,
+          "visiblePoint": {
+            "x": 553,
+            "y": 265
+          },
+          "hiddenPoint": {
+            "x": 558,
+            "y": 298
+          },
+          "cropped": false
+        },
+        {
+          "id": "sofa-right",
+          "visiblePixels": 2241,
+          "silhouettePixels": 4395,
+          "ratio": 0.5098976109215017,
+          "visiblePoint": {
+            "x": 676,
+            "y": 265
+          },
+          "hiddenPoint": {
+            "x": 698,
+            "y": 296
+          },
+          "cropped": false
+        },
+        {
+          "id": "cabinet",
+          "visiblePixels": 2623,
+          "silhouettePixels": 5029,
+          "ratio": 0.5215748657784848,
+          "visiblePoint": {
+            "x": 987,
+            "y": 300
+          },
+          "hiddenPoint": {
+            "x": 956,
+            "y": 334
+          },
+          "cropped": false
+        },
+        {
+          "id": "basket",
+          "visiblePixels": 3605,
+          "silhouettePixels": 6048,
+          "ratio": 0.5960648148148148,
+          "visiblePoint": {
+            "x": 156,
+            "y": 473
+          },
+          "hiddenPoint": {
+            "x": 171,
+            "y": 510
+          },
+          "cropped": false
+        },
+        {
+          "id": "plant",
+          "visiblePixels": 3021,
+          "silhouettePixels": 4914,
+          "ratio": 0.6147741147741148,
+          "visiblePoint": {
+            "x": 46,
+            "y": 380
+          },
+          "hiddenPoint": {
+            "x": 75,
+            "y": 408
+          },
+          "cropped": false
+        },
+        {
+          "id": "knitting",
+          "visiblePixels": 2572,
+          "silhouettePixels": 5021,
+          "ratio": 0.512248556064529,
+          "visiblePoint": {
+            "x": 269,
+            "y": 499
+          },
+          "hiddenPoint": {
+            "x": 309,
+            "y": 532
+          },
+          "cropped": false
+        },
+        {
+          "id": "picture",
+          "visiblePixels": 2364,
+          "silhouettePixels": 3621,
+          "ratio": 0.6528583264291632,
+          "visiblePoint": {
+            "x": 487,
+            "y": 41
+          },
+          "hiddenPoint": {
+            "x": 512,
+            "y": 70
+          },
+          "cropped": false
+        },
+        {
+          "id": "portrait",
+          "visiblePixels": 2028,
+          "silhouettePixels": 3639,
+          "ratio": 0.5572959604286892,
+          "visiblePoint": {
+            "x": 667,
+            "y": 108
+          },
+          "hiddenPoint": {
+            "x": 645,
+            "y": 136
+          },
+          "cropped": false
+        },
+        {
+          "id": "letters",
+          "visiblePixels": 2211,
+          "silhouettePixels": 4009,
+          "ratio": 0.5515091045148416,
+          "visiblePoint": {
+            "x": 812,
+            "y": 196
+          },
+          "hiddenPoint": {
+            "x": 763,
+            "y": 227
+          },
+          "cropped": false
+        },
+        {
+          "id": "arm",
+          "visiblePixels": 2035,
+          "silhouettePixels": 4607,
+          "ratio": 0.4417191230735837,
+          "visiblePoint": {
+            "x": 303,
+            "y": 363
+          },
+          "hiddenPoint": {
+            "x": 308,
+            "y": 381
+          },
+          "cropped": false
+        }
+      ],
+      "overlappingIds": [],
+      "stable": true
+    },
+    {
+      "stage": 4,
+      "visibility": [
+        {
+          "id": "curtain",
+          "visiblePixels": 3316,
+          "silhouettePixels": 4596,
+          "ratio": 0.721496953872933,
+          "visiblePoint": {
+            "x": 171,
+            "y": 208
+          },
+          "hiddenPoint": {
+            "x": 192,
+            "y": 235
+          },
+          "cropped": false
+        },
+        {
+          "id": "curtain-right",
+          "visiblePixels": 3044,
+          "silhouettePixels": 4103,
+          "ratio": 0.7418961735315622,
+          "visiblePoint": {
+            "x": 360,
+            "y": 182
+          },
+          "hiddenPoint": {
+            "x": 372,
+            "y": 213
+          },
+          "cropped": false
+        },
+        {
+          "id": "sofa-left",
+          "visiblePixels": 2175,
+          "silhouettePixels": 5027,
+          "ratio": 0.4326636164710563,
+          "visiblePoint": {
+            "x": 412,
+            "y": 265
+          },
+          "hiddenPoint": {
+            "x": 412,
+            "y": 298
+          },
+          "cropped": false
+        },
+        {
+          "id": "sofa",
+          "visiblePixels": 2182,
+          "silhouettePixels": 5027,
+          "ratio": 0.43405609707579074,
+          "visiblePoint": {
+            "x": 553,
+            "y": 265
+          },
+          "hiddenPoint": {
+            "x": 558,
+            "y": 298
+          },
+          "cropped": false
+        },
+        {
+          "id": "sofa-right",
+          "visiblePixels": 2241,
+          "silhouettePixels": 4395,
+          "ratio": 0.5098976109215017,
+          "visiblePoint": {
+            "x": 676,
+            "y": 265
+          },
+          "hiddenPoint": {
+            "x": 698,
+            "y": 296
+          },
+          "cropped": false
+        },
+        {
+          "id": "cabinet",
+          "visiblePixels": 2623,
+          "silhouettePixels": 5029,
+          "ratio": 0.5215748657784848,
+          "visiblePoint": {
+            "x": 987,
+            "y": 300
+          },
+          "hiddenPoint": {
+            "x": 956,
+            "y": 334
+          },
+          "cropped": false
+        },
+        {
+          "id": "basket",
+          "visiblePixels": 3605,
+          "silhouettePixels": 6048,
+          "ratio": 0.5960648148148148,
+          "visiblePoint": {
+            "x": 156,
+            "y": 473
+          },
+          "hiddenPoint": {
+            "x": 171,
+            "y": 510
+          },
+          "cropped": false
+        },
+        {
+          "id": "plant",
+          "visiblePixels": 3021,
+          "silhouettePixels": 4914,
+          "ratio": 0.6147741147741148,
+          "visiblePoint": {
+            "x": 46,
+            "y": 380
+          },
+          "hiddenPoint": {
+            "x": 75,
+            "y": 408
+          },
+          "cropped": false
+        },
+        {
+          "id": "knitting",
+          "visiblePixels": 2572,
+          "silhouettePixels": 5021,
+          "ratio": 0.512248556064529,
+          "visiblePoint": {
+            "x": 269,
+            "y": 499
+          },
+          "hiddenPoint": {
+            "x": 309,
+            "y": 532
+          },
+          "cropped": false
+        },
+        {
+          "id": "picture",
+          "visiblePixels": 2364,
+          "silhouettePixels": 3621,
+          "ratio": 0.6528583264291632,
+          "visiblePoint": {
+            "x": 487,
+            "y": 41
+          },
+          "hiddenPoint": {
+            "x": 512,
+            "y": 70
+          },
+          "cropped": false
+        },
+        {
+          "id": "portrait",
+          "visiblePixels": 2028,
+          "silhouettePixels": 3639,
+          "ratio": 0.5572959604286892,
+          "visiblePoint": {
+            "x": 667,
+            "y": 108
+          },
+          "hiddenPoint": {
+            "x": 645,
+            "y": 136
+          },
+          "cropped": false
+        },
+        {
+          "id": "letters",
+          "visiblePixels": 2211,
+          "silhouettePixels": 4009,
+          "ratio": 0.5515091045148416,
+          "visiblePoint": {
+            "x": 812,
+            "y": 196
+          },
+          "hiddenPoint": {
+            "x": 763,
+            "y": 227
+          },
+          "cropped": false
+        },
+        {
+          "id": "arm",
+          "visiblePixels": 2035,
+          "silhouettePixels": 4607,
+          "ratio": 0.4417191230735837,
+          "visiblePoint": {
+            "x": 303,
+            "y": 363
+          },
+          "hiddenPoint": {
+            "x": 308,
+            "y": 381
+          },
+          "cropped": false
+        }
+      ],
+      "overlappingIds": [],
+      "stable": true
+    }
+  ]
+}

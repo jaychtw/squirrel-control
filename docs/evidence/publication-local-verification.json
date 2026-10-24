@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-25",
+  "timezone": "Asia/Taipei",
+  "scope": "Local validation of publication automation; not hosted CI or public gameplay verification",
+  "approvedGameSource": "4c1f7886148626b2c9ff3f59d5fa0bdddee4b3de",
+  "commands": [
+    "npm test",
+    "node scripts/create-release.mjs",
+    "DEPLOY_URL=http://127.0.0.1:4176/ RELEASE_COMMIT=$(git rev-parse HEAD) node scripts/verify-deployment.mjs"
+  ],
+  "fullSuite": {
+    "startTime": "2026-10-24T19:42:55.237Z",
+    "duration": 93479.951,
+    "expected": 51,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "unmockedLossWallTimeMs": 60225,
+  "publicationSmoke": {
+    "url": "http://127.0.0.1:4176/",
+    "expectedReleaseCommit": "a41f380c00d29fa527e47b91fb9b6632c8ec1a82",
+    "startedAt": "2026-10-24T19:44:15.145Z",
+    "checks": [
+      {
+        "name": "Public URL serves the exact release commit",
+        "status": "passed"
+      },
+      {
+        "name": "Published JavaScript matches the human-approved candidate byte for byte",
+        "status": "passed"
+      },
+      {
+        "name": "1440px mouse / English: ten catches, opaque furniture rejection, optical lens, pause, real countdown, win, assets and no overflow",
+        "status": "passed"
+      },
+      {
+        "name": "390px touch / Traditional Chinese: ten catches, opaque furniture rejection, optical lens, pause, real countdown, win, assets and no overflow",
+        "status": "passed"
+      }
+    ],
+    "manifest": {
+      "releaseCommit": "a41f380c00d29fa527e47b91fb9b6632c8ec1a82",
+      "gameSourceCommit": "4c1f7886148626b2c9ff3f59d5fa0bdddee4b3de",
+      "version": "1.0.0-rc.1",
+      "javascript": {
+        "path": "assets/index-BqoC0M3G.js",
+        "sha256": "55403aec683d0bc3e56d8eb356594039e4f242b10f6baff726e492c0b9121871"
+      }
+    },
+    "status": "passed",
+    "finishedAt": "2026-10-24T19:44:22.711Z"
+  },
+  "humanPlaytest": "Owner reported pass; no session details supplied"
+}

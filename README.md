@@ -1,18 +1,18 @@
 # Squirrel Control
 
-**Room 1 — Miss Bunny’s Home · Gate B review candidate, v1.0.0-rc.1**
+**Room 1 — Miss Bunny’s Home · Accepted gameplay candidate, v1.0.0-rc.1**
 
 Find ten adorable squirrels in sixty seconds while Miss Bunny’s cozy cottage slips into delightful chaos. Original layered artwork, English and Traditional Chinese, desktop and touch controls, and no backend or runtime network services.
 
-The visual baseline at [`8e6c31e`](https://github.com/jaychtw/squirrel-control/commit/8e6c31eb81d7a8438bdfc72b001fac24d866dafc) was explicitly approved for Gate A. This implementation preserves its character designs, cottage palette, responsive composition and solid light-purple page background (`#e4cdf4`). **Gate B gameplay/production acceptance is pending. Public deployment is not authorized.**
+The visual baseline at [`8e6c31e`](https://github.com/jaychtw/squirrel-control/commit/8e6c31eb81d7a8438bdfc72b001fac24d866dafc) was explicitly approved for Gate A. This implementation preserves its character designs, cottage palette, responsive composition and solid light-purple page background (`#e4cdf4`). **Hands-on playtesting passed and the owner authorized public deployment on 2026-10-25 (Asia/Taipei).** See the [publication status](docs/DEPLOYMENT.md) for the distinction between authorization, CI, deployment and live verification.
 
 ## Hands-on playtest, Round 1
 
-[Download the playtest ZIP](playtest/squirrel-control-room1-4c1f788-playtest.zip), extract it, and follow `START-HERE.txt`. The verified route uses Python 3: run `python3 serve-playtest.py` in the extracted folder and open the computer address it prints. Windows can use `py serve-playtest.py`. Add `--lan` to test on a phone on the same Wi-Fi. No Node.js or package installation is needed to play, and nothing is publicly hosted.
+[Download the playtest ZIP](playtest/squirrel-control-room1-4c1f788-playtest.zip), extract it, and follow `START-HERE.txt`. The verified route uses Python 3: run `python3 serve-playtest.py` in the extracted folder and open the computer address it prints. Windows can use `py serve-playtest.py`. Add `--lan` to test on a phone on the same Wi-Fi. No Node.js or package installation is needed to play, the helper serves only your computer or local network.
 
-Play three fresh visual rounds, then return your device/browser, found/10 results and the most frustrating interaction. Direct HTML file opening remains unverified because this cloud browser blocks file URLs; use the helper for the verified route. [Session plan](docs/playtesting/ROUND-1.md) · [Bilingual feedback sheet](docs/playtesting/FEEDBACK.md) · [Human results, pending](docs/playtesting/RESULTS.md).
+Play three fresh visual rounds, then return your device/browser, found/10 results and the most frustrating interaction. Direct HTML file opening remains unverified because this cloud browser blocks file URLs; use the helper for the verified route. [Session plan](docs/playtesting/ROUND-1.md) · [Bilingual feedback sheet](docs/playtesting/FEEDBACK.md) · [Owner playtest approval](docs/playtesting/RESULTS.md).
 
-The package contains the unchanged `4c1f788` game candidate. `npm run test:playtest` runs the separate portable-package checks; `npm test` remains the existing game suite. Human playtest and final production acceptance are pending.
+The package contains the unchanged `4c1f788` game candidate. `npm run test:playtest` runs the separate portable-package checks; `npm test` remains the existing game suite. The owner has accepted the hands-on playtest; no device details or session scores were reported.
 
 ## Review on GitHub
 

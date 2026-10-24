@@ -2,18 +2,16 @@
 
 ## Gate A — approved
 
-The user explicitly accepted the redesigned characters, cottage, responsive layouts and solid light-purple page background at commit **`8e6c31eb81d7a8438bdfc72b001fac24d866dafc`** as the visual baseline, and authorized autonomous Gate B implementation. The record is the approval in this task conversation; it is not inferred from screenshots or automated tests.
+The user explicitly accepted the redesigned characters, cottage, responsive layouts and solid light-purple page background at commit **`8e6c31eb81d7a8438bdfc72b001fac24d866dafc`** as the visual baseline. The full implementation preserves that approved direction. [Archived visual report](VISUAL-REVIEW.md).
 
-The [archived Gate A report](VISUAL-REVIEW.md), [character sheet](evidence/character-study.png) and `room-*.png` captures describe that approved prototype. The full implementation reuses its artwork, hit-mask rendering, optical magnifier, bilingual foundation and responsive composition. Additional authored hide props and the sad host reaction follow the same direction.
+## Gate B — accepted after hands-on playtesting
 
-## Gate B — implementation submitted; gameplay/production acceptance pending
+Room 1 was delivered at game-source commit **`4c1f7886148626b2c9ff3f59d5fa0bdddee4b3de`**, with the downloadable hands-on kit prepared at `a41f380`. On **2026-10-25 (Asia/Taipei)**, the user stated: **“Play testing is passed. Proceed to public deployment.”** This records the owner's gameplay acceptance and publication authorization. It is a human decision, separate from the automated checks in [Gate B verification](GATE-B-REVIEW.md).
 
-The user authorized completing Room 1 according to GDD v1.0 and pinned UGDS v1.0.0, committing it and pushing it to `main` with evidence. See [Gate B verification](GATE-B-REVIEW.md) and the `gameplay-*.png` captures. Automated tests and code delivery do not constitute the user's final acceptance of difficulty, fun, interaction comfort, audio, animation or copy.
+The user did not supply session scores, devices, browsers or detailed observations. Those details remain unreported; no independent-player, physical-device or manual accessibility results are inferred. [Playtesting record](playtesting/RESULTS.md).
 
-## Hands-on playtest — requested and prepared, results pending
+## Gate C — authorized; publication in progress
 
-The user requested a hands-on round before deployment. [Round 1](playtesting/ROUND-1.md) provides a downloadable distribution of the unchanged `4c1f788` game, local-only launch instructions, a bilingual feedback sheet and an empty results log. Automated package checks establish delivery behavior; they do not supply human observations or grant gameplay acceptance. No human session results have been recorded yet.
+The latest explicit authorization supersedes the earlier **“Do not deploy publicly yet”** checkpoint. Publication uses GitHub Pages, as specified by the GDD. The deployment preserves the accepted game bundle and adds build/test/deployment automation and public gameplay verification.
 
-## Gate C — not authorized
-
-The user explicitly instructed **“Do not deploy publicly yet.”** No Pages deployment workflow, public release/tag, or live gameplay publication is part of this delivery. Pushing review source and evidence to the existing repository does not grant public deployment authorization. Production acceptance and deployment authorization remain separate checkpoints.
+Build success, source push, hosted CI, deployment and live interaction verification are tracked separately in [the publication report](DEPLOYMENT.md). Authorization alone does not mean publication has succeeded.

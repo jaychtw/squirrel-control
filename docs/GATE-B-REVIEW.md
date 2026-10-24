@@ -1,6 +1,8 @@
 # Room 1 — Gate B implementation and verification
 
-**Implementation complete for gameplay review; production acceptance pending.** Version `1.0.0-rc.1`. The user approved Gate A at **`8e6c31eb81d7a8438bdfc72b001fac24d866dafc`** and authorized this implementation and source push to `main`. Public deployment remains explicitly unauthorized. See [acceptance record](ACCEPTANCE.md).
+**Archived implementation review; owner subsequently accepted hands-on playtesting and authorized publication on 2026-10-25 (Asia/Taipei).** See [current publication status](DEPLOYMENT.md). The evidence below describes the Gate B delivery before that approval.
+
+**Original review status: implementation complete for gameplay review; production acceptance pending.** Version `1.0.0-rc.1`. The user approved Gate A at **`8e6c31eb81d7a8438bdfc72b001fac24d866dafc`** and authorized this implementation and source push to `main`. Public deployment remains explicitly unauthorized. See [acceptance record](ACCEPTANCE.md).
 
 ## Delivered behavior
 

@@ -1,25 +1,24 @@
 # Round 1 — human observations
 
-**Status: awaiting the first human session.** The following table is intentionally empty. Automated browser actions, screenshots and packaging checks are not human playtest results.
+**Status: passed, as reported by the owner on 2026-10-25 (Asia/Taipei).**
 
-Candidate: `1.0.0-rc.1` / game source `4c1f788`. Session date, device, browser and prior familiarity must accompany any reported result.
+The user stated: **“Play testing is passed. Proceed to public deployment.”** The accepted game candidate is `1.0.0-rc.1` / source `4c1f788`, distributed in the hands-on kit at `a41f380`.
+
+No per-session scores, device/browser information or detailed observations were supplied. The table remains empty rather than inventing those details. Automated browser actions and screenshots are recorded separately from human playtesting.
 
 | Session label (no identity needed) | Device / browser / input | Language | Prior familiarity | Three visual scores | Guide-assisted? | Key finding | Triage / follow-up |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 
-No difficulty, touch-comfort, physical-device, manual accessibility or production-acceptance result has been inferred.
+## Coverage details not reported
 
-## Open checks
+- First-time independent-player scores, difficulty and replay observations.
+- Specific physical iOS/Android, Safari/Firefox and assistive-technology coverage.
+- Manual typography, audio and motion observations.
 
-- First three uncoached visual attempts and replay motivation.
-- Physical iOS/Android tap accuracy, drag/lens comfort and performance.
-- Manual Safari/Firefox, keyboard/focus and screen-reader assessment.
-- Traditional Chinese typography/copy, sound and motion appeal.
-- Owner gameplay/production acceptance after feedback and fixes.
+These are limits of the supplied evidence, not a request to repeat the owner's approval.
 
 ## Decisions
 
 - Gate A art approval remains in force at `8e6c31e`.
-- Gate B implementation/evidence is submitted at `4c1f788`; human gameplay acceptance is pending.
-- This hands-on round has been requested and prepared; actual observations have not arrived.
-- Public deployment is not authorized.
+- Gate B gameplay is accepted by the owner following hands-on playtesting.
+- Public deployment is explicitly authorized; see [publication status](../DEPLOYMENT.md).
